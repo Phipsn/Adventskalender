@@ -27,7 +27,7 @@ h1 {
 
 p {
     font-size: 18px;
-    color: #black """#fff; /* Weißer Text für bessere Lesbarkeit */"""
+    color: #333 """#fff; /* Weißer Text für bessere Lesbarkeit */"""
 }
 
 button {
