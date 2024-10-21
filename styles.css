@@ -1,0 +1,305 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5f5; /* Schneeweiß für weihnachtliches Flair */
+    color: #333;
+    text-align: center;
+    /*background-image: url('images/schneeflocken.jpg'); /* Füge ein festliches Bild hinzu */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #a31f1f; /* Festliches Rot für den Header */
+    color: white;
+    padding: 50px 0;
+    background-image: url('lichter.jpg'); /* Weihnachtslichter im Header */
+    background-size: cover;
+    z-index: 1;
+    position: relative;
+}
+
+h1 {
+    font-size: 36px;
+    color: #f0e68c; /* Ein Hauch von Gold für festlichen Text */
+}
+
+p {
+    font-size: 18px;
+    color: #black """#fff; /* Weißer Text für bessere Lesbarkeit */"""
+}
+
+button {
+    background-color: #4caf50; /* Grün für den Button */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #388e3c; /* Dunkleres Grün beim Hover-Effekt */
+}
+
+section {
+    padding: 40px 20px;
+    background-color: #fff5f5; /* Leichtes Schneeweiß für Abschnitte */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#countdown {
+    background-color: #ffebcd; /* Cremefarben für den Countdown-Bereich */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichte Schatten für Tiefe */
+}
+
+#timer {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b22222; /* Dunkleres Rot für den Timer */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+/* FAQ Styles */
+.faq-question {
+    background-color: #4caf50; /* Grün für FAQ-Fragen */
+    color: white;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #388e3c;
+}
+
+.faq-answer {
+    display: none;
+    background-color: #fafafa;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+
+#h6{
+  color: #fff;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* Wenn geöffnet, dreht sich der Pfeil nach oben */
+.open .arrow {
+    transform: rotate(180deg);
+}
+
+/* Kontaktformular */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    background-color: #d32f2f; /* Kräftiges Rot für den Absende-Button */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #c62828;
+}
+
+#formStatus {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #388e3c; /* Grün für positive Nachrichten */
+}
+
+.image-overlay {
+    position: absolute; /* Das Bild scrollt mit dem Rest der Seite */
+    top: 150px;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 20px; /* Abstand vom oberen Rand */
+    text-align: center; /* Zentriert das Bild horizontal */
+    z-index: 2;
+}
+
+.image-overlay img {
+    width: 1000px; /* Ändert die Breite des Bildes */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    opacity: 1; /* Optional: Transparenz */
+}
+
+.image-overlay:hover img {
+    opacity: 1; /* Bild wird bei Hover komplett sichtbar */
+}
+
+
+/* Container für die Karten */
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Karten gleichmäßig verteilen */
+    align-items: flex-start; /* Oberkante der Karten ausrichten */
+    margin-top: 20px;
+    position: relative;
+}
+
+/* Styling für jede Karte */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt */
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Kartenlayout: 1. Preis in der Mitte höher positionieren */
+.card-center {
+    transform: translateY(-30px); /* Mittlere Karte nach oben verschieben */
+    z-index: 1; /* Damit der 1. Preis vor den anderen Karten steht */
+}
+
+/* Linke und rechte Karte */
+.card-left, .card-right {
+    flex: 1; /* Flexbox sorgt dafür, dass die linken und rechten Karten gleichmäßig verteilt sind */
+}
+
+/* Hover-Effekt für die Karten */
+.card:hover {
+    transform: translateY(-10px); /* Hebt die Karte leicht an */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Erhöht den Schatteneffekt */
+}
+
+/* Bild innerhalb der Karten */
+.card-img {
+    width: 100px; /* Größe des Bildes */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Titel in den Karten */
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Text in den Karten */
+.card p {
+    font-size: 18px;
+    color: #555; /* Graue Textfarbe */
+}
+
+/* Anpassung für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Karten untereinander auf kleinen Bildschirmen */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Passt die Kartenbreite an */
+        margin-bottom: 20px;
+    }
+
+    /* Zurücksetzen der Transformation für die mittlere Karte auf kleinen Bildschirmen */
+    .card-center {
+        transform: translateY(0);
+    }
+}
+
+
+/* Container für die Anweisung */
+.instruction-container {
+    display: flex;
+    height: 400px; /* Höhe des Abschnitts */
+}
+
+/* Linke Hälfte: rot und ohne Text */
+.instruction-left {
+    background-color: #c62828; /* Rote Farbe */
+    flex: 1; /* Nimmt die Hälfte des Containers ein */
+}
+
+/* Rechte Hälfte: Text */
+.instruction-right {
+    flex: 1; /* Nimmt die andere Hälfte des Containers ein */
+    padding: 40px;
+    background-color: #f7f7f7; /* Normaler Hintergrund */
+}
+
+.instruction-right h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.instruction-right ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.instruction-right li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Responsives Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .instruction-container {
+        flex-direction: column; /* Elemente untereinander für kleine Bildschirme */
+        height: auto; /* Höhe flexibel anpassen */
+    }
+
+    .instruction-left {
+        height: 200px; /* Höhe des roten Bereichs verringern */
+    }
+}

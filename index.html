@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adventskalender Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 style="margin-bottom: 10px;">Adventskalender Quiz – Rätselspaß bis Weihnachten!</h1>
+
+        <p style="margin-bottom: 200px;"id="h6">Kauf dir jetzt deinen Kalender für nur 4,95€ und gewinne einen Goldbarren im Wert von 500€!</p>
+        <button onclick="scrollToSection('rules')">Mitmachen für 4,95€</button>
+    </header>
+    <div class="image-overlay">
+      <img src="images/background.png" alt="Overlay Image">
+    </div>
+
+    <section id="calendar">
+        <h2>Nächste Rätsel:</h2>
+        <div id="countdown">
+            <p>Das nächste Rätsel erscheint in:</p>
+            <p id="timer">00:00:00</p>
+        </div>
+        <p>Mittwochs und Sonntags um 18:00 Uhr!</p>
+    </section>
+
+    <section id="rules">
+        <h2>Wie funktioniert der Adventskalender?</h2>
+        <ul>
+            <li>Jeden Mittwoch und Sonntag um 18:00 Uhr gibt es ein Rätsel.</li>
+            <li>An anderen Tagen gibt es schöne Sprüche, Geschichten oder Gutscheine.</li>
+            <li>Die Antworten müssen korrekt sein, um weiterhin die Gewinnchance zu behalten.</li>
+            <li>Am 24.12. gewinnt der Teilnehmer, der das letzte Rätsel am schnellsten löst.</li>
+        </ul>
+    </section>
+
+    <section id="instructions">
+    <div class="instruction-container">
+        <div class="instruction-left">
+            <!-- Linke Hälfte: Rot -->
+        </div>
+        <div class="instruction-right">
+            <h2>Wie funktioniert der Adventskalender?</h2>
+            <ul>
+                <li>Jeden Mittwoch und Sonntag um 18:00 Uhr gibt es ein Rätsel.</li>
+                <li>An anderen Tagen gibt es schöne Sprüche, Geschichten oder Gutscheine.</li>
+                <li>Die Antworten müssen korrekt sein, um weiterhin die Gewinnchance zu behalten.</li>
+                <li>Am 24.12. gewinnt der Teilnehmer, der das letzte Rätsel am schnellsten löst.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+    <section id="prizes">
+    <h2>Preise</h2>
+    <div class="card-container">
+        <div class="card card-left">
+            <img src="path-to-silver-maple-leaf.jpg" alt="Maple Leaf Silber" class="card-img">
+            <h3>2. Preis</h3>
+            <p>Maple Leaf Silber</p>
+        </div>
+        <div class="card card-center">
+            <img src="path-to-gold-bar.jpg" alt="Goldbarren" class="card-img">
+            <h3>1. Preis</h3>
+            <p>Goldbarren im Wert von 500€</p>
+        </div>
+        <div class="card card-right">
+            <img src="path-to-bronze-maple-leaf.jpg" alt="Maple Leaf Bronze" class="card-img">
+            <h3>3. Preis</h3>
+            <p>Maple Leaf Bronze</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <section id="faqs">
+        <h2>Häufig gestellte Fragen (FAQs)</h2>
+        <div class="faq">
+            <button class="faq-question">1. Wie funktioniert der Adventskalender? <span class="arrow">▼</span></button>
+            <div class="faq-answer">
+                <p>Jeden Mittwoch und Sonntag wird um 18:00 Uhr ein neues Rätsel freigeschaltet. Du hast dann die Möglichkeit, bis zum nächsten Rätsel deine Antwort abzugeben. An den anderen Tagen erwarten dich inspirierende Sprüche, Geschichten, Reime oder kleine Überraschungen wie Gutscheine.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="faq-question">2. Was passiert, wenn ich eine falsche Antwort gebe? <span class="arrow">▼</span></button>
+            <div class="faq-answer">
+                <p>Wenn du ein Rätsel falsch beantwortest, verlierst du die Chance auf den Hauptpreis. Du kannst weiterhin die anderen Inhalte des Kalenders genießen, aber nur Teilnehmer, die alle Rätsel korrekt lösen, bleiben bis zum 24.12. im Rennen um die Gewinne.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <button class="faq-question">3. Kann ich auch nach dem Start des Kalenders noch teilnehmen? <span class="arrow">▼</span></button>
+            <div class="faq-answer">
+                <p>Nein, der Kalender muss bis zum 30. November gekauft werden. Danach ist der Kauf nicht mehr möglich, um sicherzustellen, dass alle Teilnehmer die gleichen Chancen haben.</p>
+            </div>
+        </div>
+        <!-- Weitere FAQs folgen hier -->
+    </section>
+
+    <!-- Kontaktformular -->
+    <section id="contact">
+        <h2>Kontaktiere uns</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Absenden</button>
+        </form>
+        <div id="formStatus"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Adventskalender Quiz. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
