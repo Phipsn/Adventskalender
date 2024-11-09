@@ -3,21 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventskalender Quiz</title>
+    <title>Rätsel-Adventskalender</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <ul>
+            <!-- <li>
+                <a href="#home">
+                    <img src="images/logo-2.png" alt="Logo" class="logo">
+                </a>
+            </li> -->
+            <li><a href="#calendar">Kalender</a></li>
+            <li><a href="#rules">Anleitung</a></li>
+            <li><a href="#prizes">Preise</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <li class="language-switch">
+                <button id="languageToggle" onclick="toggleLanguage()">🇩🇪 DE</button>
+            </li>
+        </ul>
+    </nav>
     <header>
-        <h1 style="margin-bottom: 10px;">Adventskalender Quiz – Rätselspaß bis Weihnachten!</h1>
-
-        <p style="margin-bottom: 200px;"id="h6">Kauf dir jetzt deinen Kalender für nur 4,95€ und gewinne einen Goldbarren im Wert von 500€!</p>
-        <button onclick="scrollToSection('rules')">Mitmachen für 4,95€</button>
+        <h1 style="margin-top: 100px;">Der Mats & Roxy Rätsel-Adventskalender</h1>
+        <p style="margin-bottom: 200px;"id="h6">Advents-Rätselspaß für die ganze Familie mit Mats und Roxy</p> 
     </header>
-    <div class="image-overlay">
-      <img src="images/background.png" alt="Overlay Image">
-    </div>
-
+    <!-- <div class="image-overlay">
+      <img src="images/Mats & Roxy.png" alt="Overlay Image">
+    </div> -->
+  
     <section id="calendar">
+        <h2>Nimm am Rätsel-Adventskalender teil, lerne in liebenswürdigen Kurzgeschichten Mats und Roxy kennen, gewinne einen echten Goldschatz und unterstütze einen guten Zweck!</h2>
+        <img src="images/calendar.png" alt="Riddle Advent Calendar" class="calendar-image">
         <h2>Nächste Rätsel:</h2>
         <div id="countdown">
             <p>Das nächste Rätsel erscheint in:</p>
@@ -57,51 +75,84 @@
     <section id="prizes">
     <h2>Preise</h2>
     <div class="card-container">
-        <div class="card card-left">
-            <img src="path-to-silver-maple-leaf.jpg" alt="Maple Leaf Silber" class="card-img">
-            <h3>2. Preis</h3>
-            <p>Maple Leaf Silber</p>
+        <div class="card card-center">
+            <img src="images/gold.png" alt="5g Goldbarren" class="card-img">
+            <h3>1. Preis</h3>
+            <p>Ein echter Goldbarren (5g)</p>
         </div>
         <div class="card card-center">
-            <img src="path-to-gold-bar.jpg" alt="Goldbarren" class="card-img">
-            <h3>1. Preis</h3>
-            <p>Goldbarren im Wert von 500€</p>
+            <img src="images/maplegold.png" alt="Maple Leaf in Gold 1 oz" class="card-img">
+            <h3>2. Preis</h3>
+            <p>Eine echte Maple-Leaf Gold-Münze</p>
         </div>
-        <div class="card card-right">
-            <img src="path-to-bronze-maple-leaf.jpg" alt="Maple Leaf Bronze" class="card-img">
+        <div class="card card-center">
+            <img src="images/maplesilver.png" alt="Maple Leaf in Silber 1 oz" class="card-img">
             <h3>3. Preis</h3>
-            <p>Maple Leaf Bronze</p>
+            <p>Eine echte Maple-Leaf Silber-Münze</p>
         </div>
     </div>
 </section>
 
 
 
-    <section id="faqs">
-        <h2>Häufig gestellte Fragen (FAQs)</h2>
-        <div class="faq">
-            <button class="faq-question">1. Wie funktioniert der Adventskalender? <span class="arrow">▼</span></button>
-            <div class="faq-answer">
-                <p>Jeden Mittwoch und Sonntag wird um 18:00 Uhr ein neues Rätsel freigeschaltet. Du hast dann die Möglichkeit, bis zum nächsten Rätsel deine Antwort abzugeben. An den anderen Tagen erwarten dich inspirierende Sprüche, Geschichten, Reime oder kleine Überraschungen wie Gutscheine.</p>
-            </div>
+<section id="faqs">
+    <h2>Häufig gestellte Fragen (FAQs)</h2>
+
+    <div class="faq">
+        <button class="faq-question">1. Wie nehme ich teil? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Um teilzunehmen, sende einfach eine Nachricht per <a href="https://wa.me/+4915739372203" target="_blank">WhatsApp</a> oder eine <a href="mailto:matsundroxy@gmail.com">E-Mail</a>. Die Teilnahmegebühr beträgt 5€.</p>
         </div>
-        <div class="faq">
-            <button class="faq-question">2. Was passiert, wenn ich eine falsche Antwort gebe? <span class="arrow">▼</span></button>
-            <div class="faq-answer">
-                <p>Wenn du ein Rätsel falsch beantwortest, verlierst du die Chance auf den Hauptpreis. Du kannst weiterhin die anderen Inhalte des Kalenders genießen, aber nur Teilnehmer, die alle Rätsel korrekt lösen, bleiben bis zum 24.12. im Rennen um die Gewinne.</p>
-            </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">2. Wie funktioniert der Adventskalender? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Du erhältst pro Woche drei Rätsel per WhatsApp oder E-Mail: samstags und sonntags um 12 Uhr und mittwochs um 19 Uhr. Beantworte die Rätsel vor der Veröffentlichung des nächsten, um weiterhin im Rennen zu bleiben.</p>
         </div>
-        <div class="faq">
-            <button class="faq-question">3. Kann ich auch nach dem Start des Kalenders noch teilnehmen? <span class="arrow">▼</span></button>
-            <div class="faq-answer">
-                <p>Nein, der Kalender muss bis zum 30. November gekauft werden. Danach ist der Kauf nicht mehr möglich, um sicherzustellen, dass alle Teilnehmer die gleichen Chancen haben.</p>
-            </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">3. Wie werden die Gewinner bestimmt? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Am 4. Advent gewinnt die Person, die das letzte Rätsel am schnellsten löst, sofern auch die vorherigen Rätsel richtig beantwortet wurden. Wird das letzte Rätsel nicht gelöst, gewinnt die Person mit den meisten korrekt gelösten Rätseln in der angegebenen Zeit.</p>
         </div>
-        <!-- Weitere FAQs folgen hier -->
-    </section>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">4. Was passiert, wenn ich eine falsche Antwort gebe? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Bei einer falschen Antwort verlierst du die Chance auf den Hauptpreis. Du kannst aber weiterhin alle weiteren Inhalte des Kalenders genießen. Nur Teilnehmer, die alle Rätsel korrekt lösen, sind bis zum 24.12. im Rennen um die Hauptgewinne.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">5. Kann ich nach dem Start des Kalenders noch teilnehmen? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Nein, der Kalender muss bis zum 30. November gekauft werden, um sicherzustellen, dass alle Teilnehmer die gleichen Chancen haben. Danach ist kein Kauf mehr möglich.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">6. Was passiert mit dem Teilnehmerbeitrag? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Der gesamte Teilnehmerbeitrag wird für die Preise und eine Spende an einen gemeinnützigen Zweck verwendet. Es verbleibt kein Gewinn bei mir. Der gemeinnützige Zweck wird transparent offengelegt und durch eine Abstimmung der Teilnehmer ausgewählt – Vorschläge sind willkommen!</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">7. Was passiert mit meinen Daten? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Deine Daten (Telefonnummer, E-Mail etc.) werden nicht gespeichert oder an Dritte weitergegeben. Es gibt keine Werbepartner oder Kooperationen, und deine Teilnahme erfolgt über direkte Nachrichten, nicht in einer öffentlichen WhatsApp-Gruppe.</p>
+        </div>
+    </div>
+
+    <!-- Weitere FAQs können hier hinzugefügt werden -->
+</section>
+
 
     <!-- Kontaktformular -->
-    <section id="contact">
+<!--     <section id="contact">
         <h2>Kontaktiere uns</h2>
         <form id="contactForm">
             <label for="name">Name:</label>
@@ -116,11 +167,19 @@
             <button type="submit">Absenden</button>
         </form>
         <div id="formStatus"></div>
-    </section>
+    </section> -->
 
     <footer>
-        <p>&copy; 2024 Adventskalender Quiz. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Rätsel-Adventskalender. Alle Rechte vorbehalten.</p>
+        <p>
+            <a href="impressum.html">Impressum</a> | 
+            <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+            <a href="riddleadventcalendar.html">riddle</a>
+        </p>
     </footer>
+    <!-- "Nach oben" Pfeil -->
+    <button id="scrollToTopBtn" onclick="scrollToTop()">▲</button>
+
 
     <script src="script.js"></script>
 </body>

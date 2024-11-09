@@ -5,7 +5,6 @@ body {
     background-color: #fff5f5; /* Schneeweiß für weihnachtliches Flair */
     color: #333;
     text-align: center;
-    /*background-image: url('images/schneeflocken.jpg'); /* Füge ein festliches Bild hinzu */
     background-size: cover;
     background-attachment: fixed;
 }
@@ -13,9 +12,9 @@ body {
 header {
     background-color: #a31f1f; /* Festliches Rot für den Header */
     color: white;
-    padding: 50px 0;
-    background-image: url('lichter.jpg'); /* Weihnachtslichter im Header */
-    background-size: cover;
+    padding: 140px 0;
+    background-image: url('images/Untitled\ design-7.png'); /* Weihnachtslichter im Header */
+    background-size:cover;
     z-index: 1;
     position: relative;
 }
@@ -31,7 +30,7 @@ p {
 }
 
 button {
-    background-color: #4caf50; /* Grün für den Button */
+    background-color: #334c36; /* Grün für den Button */
     color: white;
     border: none;
     padding: 12px 24px;
@@ -67,15 +66,31 @@ section {
     color: #b22222; /* Dunkleres Rot für den Timer */
 }
 
+
 footer {
     background-color: #333;
     color: white;
     padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+footer a {
+    color: #ff9800; /* Festliche Farbe für Links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 /* FAQ Styles */
 .faq-question {
-    background-color: #4caf50; /* Grün für FAQ-Fragen */
+    background-color: #334c36; /* Grün für FAQ-Fragen */
     color: white;
     border: none;
     width: 100%;
@@ -91,7 +106,7 @@ footer {
 }
 
 .faq-question:hover {
-    background-color: #388e3c;
+    background-color: #334c36;
 }
 
 .faq-answer {
@@ -142,7 +157,7 @@ input, textarea {
 }
 
 button[type="submit"] {
-    background-color: #d32f2f; /* Kräftiges Rot für den Absende-Button */
+    background-color: #334c36; /* Kräftiges Rot für den Absende-Button */
     color: white;
     border: none;
     padding: 10px;
@@ -303,3 +318,200 @@ button[type="submit"]:hover {
         height: 200px; /* Höhe des roten Bereichs verringern */
     }
 }
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #334c36;
+    padding: 10px;
+    text-align: center;
+    z-index: 3;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px 20px;
+    margin: 20px;
+}
+
+/* "Nach oben" Pfeil */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #e68900;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+/* Sprache-Button */
+.language-switch button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.language-switch button:hover {
+    text-decoration: underline;
+}
+/* Logo Styling */
+.logo {
+    width: 80px;       /* Breite des Logos festlegen */
+    height: 60px;      /* Höhe des Logos festlegen */
+    /*border-radius: 50%;   /* Rundes Bild */
+    object-fit: cover;    /* Bild passend zuschneiden */
+}
+
+
+
+
+.calendar {
+    text-align: center;
+}
+
+
+/* Grid layout for calendar */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Day cell styles */
+.calendar-day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    position: relative;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+}
+
+/* Different colors for specific events */
+.empty {
+    background-color: #f7f7f7;
+}
+
+.deadline {
+    background-color: #ffdedf;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.purple {
+    background-color: #d8a8ff;
+    color: #fff;
+}
+
+.yellow {
+    background-color: #ffd966;
+    color: #333;
+}
+
+.advent {
+    background-color: #ffd1a4;
+    color: #333;
+}
+
+.green {
+    background-color: #b0ffb0;
+    color: #007700;
+    font-weight: bold;
+}
+
+.winner {
+    background-color: #b0ffb0;
+    color: #007700;
+    font-weight: bold;
+}
+
+/* Additional styles for icons and day labels */
+.calendar-day .day-header {
+    font-weight: bold;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Icon styling */
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Text styling within days */
+.calendar-day span {
+    display: block;
+    font-size: 0.75rem;
+    margin-top: 5px;
+}
+
+/* Footer styling for instructions */
+.calendar-footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+
