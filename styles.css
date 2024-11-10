@@ -9,15 +9,38 @@ body {
     background-attachment: fixed;
 }
 
+
+
 header {
-    /*background-color: #a31f1f; /* Festliches Rot für den Header */
-    color: white;
+    background-image: url('images/Untitled design-7.png'); /* Standardbild */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 140px 0;
-    background-image: url('images/Untitled\ design-7.png'); /* Weihnachtslichter im Header */
-    background-size:cover;
-    z-index: 1;
-    position: relative;
+    color: white;
 }
+
+/* Größere Bildschirme (Standardbild bleibt erhalten) */
+@media (min-width: 992px) {
+    header {
+        background-image: url('images/Untitled design-7.png'); /* Standardbild */
+    }
+}
+
+/* Mittelgroße Bildschirme */
+@media (max-width: 991px) {
+    header {
+        background-image: url('images/Untitled design-5.png'); /* Bild mit näheren Figuren */
+    }
+}
+
+/* Kleinere Bildschirme */
+@media (max-width: 768px) {
+    header {
+        background-image: url('images/Untitled design-5.png'); /* Bild mit noch näheren Figuren */
+    }
+}
+
 
 h1 {
     font-size: 36px;

@@ -4,66 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rätsel-Adventskalender</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-     <!-- Navbar -->
-     <nav class="navbar">
-        <ul>
-            <li><a href="#calendar">Kalender</a></li>
-            <li><a href="#rules">Anleitung</a></li>
-            <li><a href="#prizes">Preise</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-            <li class="language-switch">
-                <button id="languageToggle" onclick="toggleLanguage()">🇩🇪 DE</button>
-            </li>
-        </ul>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg"> <!--navbar-dark bg-dark-->
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Mats und Roxy Rätsel-Adventskalender</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#calendar">Kalender</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rules">Anleitung</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prizes">Gewinne</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                    <li class="nav-item">
+                        <button id="languageToggle" onclick="toggleLanguage()" class="btn btn-light">🇩🇪 DE</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
-    <header>
-        <h1>Der Mats & Roxy Rätsel-Adventskalender</h1>
-        <p id="h6">Advents-Rätselspaß für die ganze Familie mit Mats und Roxy</p> 
+
+    <!-- Header -->
+    <header class="bg-cover text-white text-center" style="background-image: url('images/Untitled design-7.png'); padding: 140px 0;">
+        <div class="container">
+            <h1>Der Mats & Roxy Rätsel-Adventskalender</h1>
+            <p id="h6">Advents-Rätselspaß für die ganze Familie mit Mats und Roxy</p> 
+        </div>
     </header>
-  
-    <section id="calendar">
-        <h2>Nimm am Rätsel-Adventskalender teil, lerne in liebenswürdigen Kurzgeschichten Mats und Roxy kennen, gewinne einen echten Goldschatz und unterstütze einen guten Zweck!</h2>
-        <img src="images/deutsch_calendar.png" alt="Riddle Advent Calendar" class="calendar-image">
-        <!-- <h2>Nächste Rätsel:</h2>
-        <div id="countdown">
-            <p>Das nächste Rätsel erscheint in:</p>
-            <p id="timer">00:00:00</p>
-        </div> -->
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="py-5 text-center">
+        <div class="container">
+            <h2>Nimm am Rätsel-Adventskalender teil, lerne in liebenswürdigen Kurzgeschichten Mats und Roxy kennen, gewinne einen echten Goldschatz und unterstütze einen guten Zweck!</h2>
+            <img src="images/deutsch_calendar.png" alt="Riddle Advent Calendar" class="img-fluid calendar-image">
+        </div>
     </section>
 
-    <section id="rules">
-        <!-- <h2>Wie funktioniert der Adventskalender?</h2> -->
-        <p>Adventskalender, anstatt Schokolade gibt es drei Rätsel pro Woche und Kurzgeschichten. Die Rätsel werden zeitgleich für alle veröffentlicht und sind aufeinander aufbauend. Die Person, welche das letzte Rätsel am 4. Advent, 22. Dezember 2024 zuerst löst, gewinnt einen echten Goldbarren!
-            <br>Bei der Lösung der Rätsel kommt es (bis zu den letzten Rätseln) nicht auf Schnelligkeit an, man hat Zeit bis zur Veröffentlichung des nächsten Rätsels. Alle Rätsel, Figuren, Idee, Kurzgeschichten etc. entspringen meiner Fantasie, kein einziger Satz stammt von ChatGPT o.ä.
-            <br>Rätseln, abschalten, gemeinsames Kombinieren, die Kurzgeschichten lesen und vielleicht jemanden Vorlesen und jemanden eine Freude machen und dabei einen guten Zweck unterstützen: Das ist der Mats&Roxy Rätseladventskalender!
-            </p>
+    <!-- Rules Section -->
+    <section id="rules" class="py-5">
+        <div class="container">
+            <p>Adventskalender, anstatt Schokolade gibt es drei Rätsel pro Woche und Kurzgeschichten. Die Rätsel werden zeitgleich für alle veröffentlicht und sind aufeinander aufbauend. Die Person, welche das letzte Rätsel am 4. Advent, 22. Dezember 2024 zuerst löst, gewinnt einen echten Goldbarren!
+                <br>Bei der Lösung der Rätsel kommt es (bis zu den letzten Rätseln) nicht auf Schnelligkeit an, man hat Zeit bis zur Veröffentlichung des nächsten Rätsels. Alle Rätsel, Figuren, Idee, Kurzgeschichten etc. entspringen meiner Fantasie, kein einziger Satz stammt von ChatGPT o.ä.
+                <br>Rätseln, abschalten, gemeinsames Kombinieren, die Kurzgeschichten lesen und vielleicht jemanden Vorlesen und jemanden eine Freude machen und dabei einen guten Zweck unterstützen: Das ist der Mats&Roxy Rätseladventskalender!
+                </p>
+        </div>
     </section>
 
-    <section id="prizes">
-        <h2>Preise</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="images/gold.png" alt="5g Goldbarren" class="card-img">
-                <h3>1. Preis</h3>
-                <p>Ein echter Goldbarren (5g)</p>
-            </div>
-            <div class="card">
-                <img src="images/maplegold.png" alt="Maple Leaf in Gold 1 oz" class="card-img">
-                <h3>2. Preis</h3>
-                <p>Eine echte Maple-Leaf Gold-Münze</p>
-            </div>
-            <div class="card">
-                <img src="images/maplesilver.png" alt="Maple Leaf in Silber 1 oz" class="card-img">
-                <h3>3. Preis</h3>
-                <p>Eine echte Maple-Leaf Silber-Münze</p>
+    <!-- Prizes Section -->
+    <section id="prizes" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Preise</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/gold.png" class="card-img-top" alt="5g Goldbarren">
+                        <div class="card-body">
+                            <h3>1. Preis</h3>
+                            <p>Ein echter Goldbarren (5g)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/maplegold.png" class="card-img-top" alt="Maple Leaf in Gold 1 oz">
+                        <div class="card-body">
+                            <h3>2. Preis</h3>
+                            <p>Eine echte Maple-Leaf Gold-Münze (1/10 Unze)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/maplesilver.png" class="card-img-top" alt="Maple Leaf in Silber 1 oz">
+                        <div class="card-body">
+                            <h3>3. Preis</h3>
+                            <p>Eine echte Maple-Leaf Silber-Münze (1 Unze)</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- FAQ Section-->
     <section id="faqs">
         <h2>Häufig gestellte Fragen (FAQs)</h2>
         
@@ -214,12 +243,13 @@
         </div>
     </section>
     
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Rätsel-Adventskalender. Alle Rechte vorbehalten.</p>
         <p><a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
     </footer>
-
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
