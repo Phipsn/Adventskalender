@@ -25,12 +25,20 @@ header {
     header {
         background-image: url('images/Untitled design-7.png'); /* Standardbild */
     }
+    h1 {
+        font-size: 36px;
+        color: #f0e68c; /* Ein Hauch von Gold für festlichen Text */
+    }
 }
 
 /* Mittelgroße Bildschirme */
 @media (max-width: 991px) {
     header {
         background-image: url('images/Untitled design-7.png'); /* Bild mit näheren Figuren */
+    }
+    h1 {
+        font-size: 36px;
+        color: #f0e68c; /* Ein Hauch von Gold für festlichen Text */
     }
 }
 
@@ -39,13 +47,14 @@ header {
     header {
         background-image: url('images/mur.jpeg'); /* Bild mit noch näheren Figuren */
     }
+    h1 {
+        font-size: 36px;
+        color: black; /* Ein Hauch von Gold für festlichen Text */
+    }
 }
 
 
-h1 {
-    font-size: 36px;
-    color: #f0e68c; /* Ein Hauch von Gold für festlichen Text */
-}
+
 
 p {
     font-size: 18px;
