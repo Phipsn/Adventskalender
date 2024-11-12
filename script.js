@@ -73,15 +73,3 @@ function scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// script.js
-
-let isGerman = true;
-
-function toggleLanguage() {
-    isGerman = !isGerman;
-    document.getElementById("languageToggle").innerText = isGerman ? "🇩🇪 DE" : "🇬🇧 EN";
-
-    // Texte auf Deutsch oder Englisch wechseln
-    
-    // Fortfahren für alle Elemente, die in beiden Sprachen vorkommen
-}

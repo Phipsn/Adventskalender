@@ -60,7 +60,7 @@ button {
     font-size: 18px;
     cursor: pointer;
     border-radius: 10px;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
 }
 
 button:hover {
@@ -87,6 +87,32 @@ section {
     font-size: 24px;
     font-weight: bold;
     color: #b22222; /* Dunkleres Rot für den Timer */
+}
+/* Styles for the rules section */
+#rules {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.rules-paragraph {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.italic {
+    font-size: 18px;
+    font-weight: bold;
+    color: #334c36;
+    font-style: italic;
 }
 
 

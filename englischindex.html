@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Advent Calendar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">Mats and Roxy Riddle Advent Calendar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
+                <li class="nav-item"><a class="nav-link" href="#prizes">Prizes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                <!-- Instagram Icon -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/matsundroxy" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </li>
+                 <!-- Language Toggle Button -->
+                 <li class="nav-item">
+                    <button id="languageToggle" onclick="toggleLanguage()" class="btn btn-light">DE</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header -->
+    <header class="bg-cover text-white text-center" style="background-image: url('images/Untitled design-7.png'); padding: 140px 0;">
+        <div class="container">
+            <h1>The Mats & Roxy Riddle Advent Calendar</h1>
+            <p id="h6">Advent riddle fun for the whole family with Mats and Roxy</p> 
+        </div>
+    </header>
+
+    <!-- Calendar Section -->
+    <section id="calendar" class="py-5 text-center">
+        <div class="container">
+            <h2>Participate in the Riddle Advent Calendar, get to know Mats and Roxy in charming short stories, win a real gold treasure, and support a good cause!</h2>
+            <img src="images/english_calendar.png" alt="Riddle Advent Calendar" class="img-fluid calendar-image">
+        </div>
+    </section>
+
+   <!-- Rules Section -->
+<section id="rules" class="py-5">
+    <div class="container">
+        <p class="rules-paragraph highlight">Instead of chocolate, three new riddles and short stories are released each week. The riddles are published for everyone at the same time and build on each other. The person who solves the last riddle on the 4th Advent, December 22, 2024, first, will win a real gold bar!</p>
+        
+        <p class="rules-paragraph">Only the last riddle on the 4th Advent determines who solves it first. For all the previous riddles, speed doesn't matter – you have time until the next riddle is published. All riddles, characters, ideas, and short stories come from my own imagination – not a single sentence was written by ChatGPT or similar tools.</p>
+        
+        <p class="rules-paragraph italic"><span class="highlight">What to expect: </span><br>Solving riddles, unwinding, puzzling together, reading short stories, and perhaps reading to someone to bring joy – and supporting a good cause at the same time: That's the <span class="highlight">Mats & Roxy Riddle Advent Calendar!</span></p>
+    </div>
+</section>
+
+    <!-- Prizes Section -->
+    <section id="prizes" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Prizes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/gold.png" class="card-img-top" alt="5g Gold Bar">
+                        <div class="card-body">
+                            <h3>1st Prize</h3>
+                            <p>A real gold bar (5g)* </p>
+                            <p style="font-size: small;">*10g if more than 200 participants</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/maplegold110.png" class="card-img-top" alt="Maple Leaf Gold Coin 1 oz">
+                        <div class="card-body">
+                            <h3>2nd Prize</h3>
+                            <p>A real Maple Leaf Gold Coin (1/10 oz)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="images/maplesilver.png" class="card-img-top" alt="Maple Leaf Silver Coin 1 oz">
+                        <div class="card-body">
+                            <h3>3rd Prize</h3>
+                            <p>A real Maple Leaf Silver Coin (1 oz)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Button for flyer download -->
+<a href="docs/Mats&Roxy Rätsel-Adventskalender.pdf" download="Flyer" class="download-button">
+    <button>Download Info Flyer (German)</button>
+</a>
+<a href="docs/Mats&Roxy riddle advent calendar.pdf" download="Flyer" class="download-button">
+    <button>Download Info Flyer (English)</button>
+</a>
+
+  <!-- FAQ Section-->
+<section id="faqs">
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    
+    <h3>General</h3>
+    
+    <div class="faq">
+        <button class="faq-question">1. How do I participate? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>By sending a WhatsApp message to +49 157 39 37 22 03 or an email to matsundroxy@gmail.com and paying the participation fee of 5 €. You will be assigned a participant number, and you can get started.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">2. How does it work? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>You will receive 3 riddles per week in short stories via WhatsApp (preferred) or email – on Saturday & Sunday at 12 PM, and Wednesday at 7 PM. If you wish, you can also receive short stories from Mats & Roxy on other days, but only if you agree.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">3. What do I need to participate? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>A mobile phone, WhatsApp or email, and internet access.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">4. How do I answer the riddles? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Answers should be sent as a message via WhatsApp (preferred) or email. Clear instructions are provided in the riddles. Always only answer the riddles and do not send other messages during the riddle period. The first answer counts, and any answer sent cannot be deleted or edited!</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">5. How is the winner determined? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The person who solves the last riddle first on the 4th Advent wins. All previous riddles must be solved. If no one solves the last riddle, the person with the most correct answers in the given time wins. If there's a tie (several people with the same number of correct answers in the given time), a "tiebreaker riddle" on December 24th will determine the winner. Relevant participants will be informed in advance.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">6. What happens to the money? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The entire participation fee will be used for prizes and a donation to a good cause. The use of the funds will be transparently disclosed, and participants will vote on the purpose of the donation.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">7. What happens to my data? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Your number/email will be kept confidential and will not be shared in a WhatsApp group. Riddles will be sent via broadcast or email, and no data will be shared with third parties.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">8. Why is this happening? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>For the fun of solving riddles, the passion for writing, and the joy of Advent calendars!</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">9. Is this illegal gambling/lottery? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>No, prize riddles with logical puzzles are not covered by § 287 StGB (according to Schönke/Schröder/Heine/Hecker StGB § 287 Rn.5 and § 284 Rn.7), and are not considered gambling according to the GlüStV (see BVerwG, judgment of January 22, 2014 – 8 C 26/12).</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">10. What is the prize? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The fastest person on the 4th Advent wins a real 5g gold bar. If there are 200 participants, the prize increases to 10g. The second-place winner will receive a 1/10 ounce Maple Leaf gold coin, and the third-place winner will receive a 1 ounce Maple Leaf silver coin.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <button class="faq-question">11. Which good cause will be supported? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>By participating, you are also supporting a good cause. The purpose of the donation will be voted on by the participants; suggestions are welcome. My suggestion is Welthungerhilfe (World Hunger Aid).</p>
+        </div>
+    </div>
+
+    <h3>Riddles and Process</h3>
+
+    <div class="faq">
+        <button class="faq-question">12. What kind of riddles are they? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The riddles are wrapped in charming short stories by Mats the raccoon and Roxy the fox. The stories often contain hints and tips "between the lines", but the task is always clearly stated. Mostly, they are not general knowledge questions (e.g., "What is the capital of xyz?") or classic puzzles. It is more about combining and figuring out how a hint might be interpreted. It’s not about knowledge but about thinking and researching.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">13. What kind of stories are they? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The riddles come with short stories (about 2 A4 pages) from Mats the raccoon and Roxy the fox. The stories have evolved more into a "children's book" style. The idea was implemented very quickly, so the texts were written in a rush with little editing. If you like, you can also receive a short story from Mats & Roxy on other days from December 1st to 24th. These stories do not contain riddles or hidden clues, so there's no disadvantage if you don’t read the extra stories. Let us know when you register if you'd like to receive them.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">14. How long do I have to answer? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>You can answer until the next riddle is published. On Saturdays, you have one day, otherwise several days. It usually doesn’t take longer than a few minutes to solve a riddle.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">15. What happens if I can't solve a riddle? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>You can still participate and solve the other riddles, but you will no longer be eligible for the prizes. EXCEPTION: It’s possible that you aren’t the only one who couldn’t solve a riddle. If everyone has struggled with the same riddle, the person with the most correct answers wins – so you could still win. Keep solving!</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">16. How are the riddles published? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The riddles are published for everyone simultaneously via WhatsApp or email. Speed matters only for the last riddle.</p>
+        </div>
+    </div>
+
+    <h3>Payment</h3>
+
+    <div class="faq">
+        <button class="faq-question">17. How do I pay? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Via PayPal (matsundroxy@gmail.com), bank transfer (Recipient: Dominik Schommer, IBAN: DE36 1001 1001 2286 8358 58), or cash. Please include your assigned participant number when making the transfer.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">18. What is the participation fee? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>5 €!</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">19. What happens with the money? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>The participation fee is used exclusively for the prizes and a donation to a charitable cause.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <button class="faq-question">20. Can I pay more? <span class="arrow">▼</span></button>
+        <div class="faq-answer">
+            <p>Of course! Additional amounts can be used for the donation or to cover the costs. Please specify how the money should be used when making the transfer.</p>
+        </div>
+    </div>
+    
+
+</section>
+
+    
+    
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>2024 Created with love by DOSCHO. All rights reserved.</p>
+</footer>
+<script>
+    function toggleLanguage() {
+        window.location.href = 'index.html'; // Wechselt zur deutschen Version
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

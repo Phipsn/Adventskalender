@@ -5,30 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rätsel-Adventskalender</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg"> <!--navbar-dark bg-dark-->
-        <div class="container">
-            <a class="navbar-brand text-white" href="#">Mats und Roxy Rätsel-Adventskalender</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#calendar">Kalender</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#rules">Anleitung</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#prizes">Gewinne</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
-                    <li class="nav-item">
-                        <button id="languageToggle" onclick="toggleLanguage()" class="btn btn-light">🇩🇪 DE</button>
-                    </li>
-                </ul>
-            </div>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">Mats und Roxy Rätsel-Adventskalender</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#calendar">Kalender</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rules">Anleitung</a></li>
+                <li class="nav-item"><a class="nav-link" href="#prizes">Gewinne</a></li>
+                <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                <!-- Instagram Icon -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com/matsundroxy" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                </li>
+                 <!-- Sprach-Button (Englisch) ganz rechts -->
+                 <li class="nav-item">
+                    <button id="languageToggle" onclick="toggleLanguage()" class="btn btn-light">EN</button>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
 
     <!-- Header -->
     <header class="bg-cover text-white text-center" style="background-image: url('images/Untitled design-7.png'); padding: 140px 0;">
@@ -46,15 +55,18 @@
         </div>
     </section>
 
-    <!-- Rules Section -->
-    <section id="rules" class="py-5">
-        <div class="container">
-            <p>Adventskalender, anstatt Schokolade gibt es drei Rätsel pro Woche und Kurzgeschichten. Die Rätsel werden zeitgleich für alle veröffentlicht und sind aufeinander aufbauend. Die Person, welche das letzte Rätsel am 4. Advent, 22. Dezember 2024 zuerst löst, gewinnt einen echten Goldbarren!
-                <br>Bei der Lösung der Rätsel kommt es (bis zu den letzten Rätseln) nicht auf Schnelligkeit an, man hat Zeit bis zur Veröffentlichung des nächsten Rätsels. Alle Rätsel, Figuren, Idee, Kurzgeschichten etc. entspringen meiner Fantasie, kein einziger Satz stammt von ChatGPT o.ä.
-                <br>Rätseln, abschalten, gemeinsames Kombinieren, die Kurzgeschichten lesen und vielleicht jemanden Vorlesen und jemanden eine Freude machen und dabei einen guten Zweck unterstützen: Das ist der Mats&Roxy Rätseladventskalender!
-                </p>
-        </div>
-    </section>
+   <!-- Rules Section -->
+<section id="rules" class="py-5">
+    <div class="container">
+        <p class="rules-paragraph highlight">Statt Schokolade gibt es jede Woche drei neue Rätsel sowie Kurzgeschichten. Die Rätsel werden für alle gleichzeitig veröffentlicht und bauen aufeinander auf. Die Person, die das letzte Rätsel am 4. Advent, dem 22. Dezember 2024, zuerst löst, gewinnt einen echten Goldbarren!</p>
+        
+        <p class="rules-paragraph">Nur beim letzten Rätsel am 4. Advent entscheidet, wer es als Erste:r löst. Bei allen vorigen Rätseln kommt es nicht auf Schnelligkeit an – ihr habt jeweils Zeit bis zur Veröffentlichung des nächsten Rätsels. Alle Rätsel, Figuren, Ideen und Kurzgeschichten stammen aus meiner eigenen Fantasie – kein einziger Satz wurde von ChatGPT oder ähnlichen Tools verfasst.</p>
+        
+        <p class="rules-paragraph italic"><span class="highlight">Das erwartet euch: </span><br>Rätseln, abschalten, gemeinsam knobeln, die Kurzgeschichten lesen und vielleicht jemandem vorlesen, um Freude zu bereiten – und dabei noch einen guten Zweck unterstützen: Das ist der <span class="highlight">Mats & Roxy Rätseladventskalender!</span></p>
+    </div>
+</section>
+
+
 
     <!-- Prizes Section -->
     <section id="prizes" class="py-5 bg-light text-center">
@@ -66,13 +78,14 @@
                         <img src="images/gold.png" class="card-img-top" alt="5g Goldbarren">
                         <div class="card-body">
                             <h3>1. Preis</h3>
-                            <p>Ein echter Goldbarren (5g)</p>
+                            <p>Ein echter Goldbarren (5g)* </p>
+                            <p style="font-size: small;">*10g bei mehr als 200 Teilnehmern</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="images/maplegold.png" class="card-img-top" alt="Maple Leaf in Gold 1 oz">
+                        <img src="images/maplegold110.png" class="card-img-top" alt="Maple Leaf in Gold 1 oz">
                         <div class="card-body">
                             <h3>2. Preis</h3>
                             <p>Eine echte Maple-Leaf Gold-Münze (1/10 Unze)</p>
@@ -92,6 +105,13 @@
         </div>
     </section>
 
+    <!-- Button for flyer download -->
+<a href="docs/Mats&Roxy Rätsel-Adventskalender.pdf" download="Flyer" class="download-button">
+    <button>zum Info-Flyer (deutsch)</button>
+</a>
+<a href="docs/Mats&Roxy riddle advent calendar.pdf" download="Flyer" class="download-button">
+    <button>zum Info-Flyer (englisch)</button>
+</a>
     <!-- FAQ Section-->
     <section id="faqs">
         <h2>Häufig gestellte Fragen (FAQs)</h2>
@@ -129,7 +149,7 @@
         <div class="faq">
             <button class="faq-question">5. Wie wird der/die Gewinner*in bestimmt? <span class="arrow">▼</span></button>
             <div class="faq-answer">
-                <p>Die Person, welche am 4. Advent das Rätsel am schnellsten löst, gewinnt. Dafür müssen alle vorherigen Rätsel gelöst worden sein. Löst niemand das letzte Rätsel, gewinnt die Person, die in der vorgegebenen Zeit die meisten Rätsel richtig gelöst hat.</p>
+                <p>Die Person, welche am 4. Advent das Rätsel am schnellsten löst, gewinnt. Dafür müssen alle vorherigen Rätsel gelöst worden sein. Löst niemand das letzte Rätsel, gewinnt die Person, die in der vorgegebenen Zeit die meisten Rätsel richtig gelöst hat. Gibt es auch hier einen Gleichstand (mehrere Personen mit der gleichen Anzahl an in der vorgegebenen Zeit richtig gelösten Rätseln), werden über ein "Entscheidungsrätsel" am 24. Dezember die Gewinner:in bestimmt. Die relevanten Teilnehmer:innen werden vorab informiert.</p>
             </div>
         </div>
         
@@ -157,7 +177,9 @@
         <div class="faq">
             <button class="faq-question">9. Ist das ein verbotenes Glücksspiel/Lotterie? <span class="arrow">▼</span></button>
             <div class="faq-answer">
-                <p>Nein, Preisrätsel mit Denksportaufgaben unterliegen nicht § 287 StGB. Es handelt sich nicht um ein Glücksspiel nach dem GlüStV.</p>
+                <p>Nein, Preisrätsel mit Denksportaufgaben unterfallen mangels Abhängigkeit vom Zufall nicht dem § 287 StGB (nachzulesen in: Schönke/Schröder/Heine/Hecker StGB § 287 Rn.5 und § 284 Rn. 7), außerdem: BGH, Urt. v. 8.8.2017 − 1 StR 519/16 (LG Chemnitz).
+                    Bei dem Rätsel Adventskalender handelt es sich nicht um ein Glücksspiel nach dem GlüStV (siehe hierzu insbesondere BVerwG, Urteil vom 22.1.2014 – 8 C 26/12). 
+                    </p>
             </div>
         </div>
     
@@ -180,14 +202,14 @@
         <div class="faq">
             <button class="faq-question">12. Was sind es für Rätsel? <span class="arrow">▼</span></button>
             <div class="faq-answer">
-                <p>Die Rätsel sind in Kurzgeschichten von Mats und Roxy verpackt und erfordern das Kombinieren und Recherchieren, nicht bloßes Wissen oder Rechenaufgaben.</p>
+                <p>Die Rätsel sind in liebenswürdigen Kurzgeschichten von Mats und Roxy „verpackt“. Die Geschichten enthalten oft Hinweise und Tipps „zwischen den Zeilen“, die Aufgabe ist aber immer ganz klar formuliert. Es sind ganz überwiegend keine Wissensabfragen (Was ist die Hauptstadt von xyz) und keine klassischen Knobel-/Rechenaufgaben. Es geht vielmehr darum, ein wenig zu Kombinieren und zu Rätseln, wie der ein oder andere Hinweis gemeint sein könnte. Es geht nicht um Wissen, sondern um Kombinieren und Recherchieren.</p>
             </div>
         </div>
         
         <div class="faq">
             <button class="faq-question">13. Was sind es für Geschichten? <span class="arrow">▼</span></button>
             <div class="faq-answer">
-                <p>Die Geschichten sind liebevoll geschrieben und eher wie ein Kinderbuch gestaltet. Wenn du möchtest, erhältst du vom 1.–24. Dezember zusätzliche Geschichten ohne Rätsel.</p>
+                <p>Die Rätsel kommen mit kurzen, ca. 2 DIN A4 Seiten Geschichten von Mats, dem Waschbären und Roxy, dem Fuchs. Die Geschichten haben sich während des Schreibens eher in Richtung „Kinderbuch“ entwickelt. Die Idee wurde auch sehr kurzfristig umgesetzt, weshalb die Texte sehr schnell und ohne viel Korrektur/Ausbesserung geschrieben wurden. Wenn du möchtest, erhältst du an den anderen Tagen vom 01.-24. Dezember zusätzlich eine kleine Geschichte von Mats & Roxy. In denen sind dann aber keine Rätsel und keinerlei Hinweise versteckt, man hat also keinen Nachteil, wenn man die zusätzlichen Kurzschichten nicht liest. Gib bei der Anmeldung an, ob du auch die weiteren Geschichten erhalten möchtest.</p>
             </div>
         </div>
         
@@ -201,7 +223,7 @@
         <div class="faq">
             <button class="faq-question">15. Was passiert, wenn ich ein Rätsel nicht lösen konnte? <span class="arrow">▼</span></button>
             <div class="faq-answer">
-                <p>Du kannst weiter teilnehmen und andere Rätsel lösen. Falls niemand ein bestimmtes Rätsel lösen konnte, gewinnt die Person mit den meisten richtigen Antworten.</p>
+                <p>Du kannst natürlich weiterhin teilnehmen und die Rätsel lösen, für die Preise bist du allerdings ausgeschieden. ABER Ausnahme: Es mag sein, dass du nicht die einzige Person bist, die bei dem ein oder anderen Rätsel nicht weiterkam. Sollte es allen so ergangen sein, gewinnt die Person, mit den meisten richtigen Antworten – du könntest also trotzdem noch gewinnen. Also – weiterrätseln!</p>
             </div>
         </div>
         
@@ -217,7 +239,7 @@
         <div class="faq">
             <button class="faq-question">17. Wie zahle ich? <span class="arrow">▼</span></button>
             <div class="faq-answer">
-                <p>Über PayPal (matsundroxy@gmail.com), Überweisung (IBAN: XYZ, BIC), oder bar. Gib bei der Überweisung die dir mitgeteilte Teilnehmernummer an.</p>
+                <p>Über PayPal (matsundroxy@gmail.com), Überweisung (Empfänger: Dominik Schommer, IBAN: DE36 1001 1001 2286 8358 58), oder bar. Gib bei der Überweisung die dir mitgeteilte Teilnehmernummer an.</p>
             </div>
         </div>
         
@@ -245,10 +267,15 @@
     
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Rätsel-Adventskalender. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Mit Liebe gemacht von DOSCHO. Alle Rechte vorbehalten.</p>
         <p><a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
     </footer>
   
+    <script>
+        function toggleLanguage() {
+            window.location.href = 'englischindex.html'; // Wechselt zur englischen Version
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
