@@ -12,7 +12,7 @@ body {
 
 
 header {
-    background-image: url('images/Untitled design-7.png'); /* Standardbild */
+    /*background-image: url('images/Untitled design-7.png'); /* Standardbild */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,14 +30,14 @@ header {
 /* Mittelgroße Bildschirme */
 @media (max-width: 991px) {
     header {
-        background-image: url('images/Untitled design-5.png'); /* Bild mit näheren Figuren */
+        background-image: url('images/Untitled design-7.png'); /* Bild mit näheren Figuren */
     }
 }
 
 /* Kleinere Bildschirme */
-@media (max-width: 768px) {
+@media (max-width: 763px) {
     header {
-        background-image: url('images/Untitled design-5.png'); /* Bild mit noch näheren Figuren */
+        background-image: url('images/mur.jpeg'); /* Bild mit noch näheren Figuren */
     }
 }
 
@@ -339,6 +339,10 @@ button[type="submit"]:hover {
     flex: 1; /* Nimmt die andere Hälfte des Containers ein */
     padding: 40px;
     background-color: #f7f7f7; /* Normaler Hintergrund */
+}
+
+h2{
+    margin-bottom: 20px;
 }
 
 .instruction-right h2 {
