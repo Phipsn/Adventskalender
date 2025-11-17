@@ -9,6 +9,20 @@ body {
     background-attachment: fixed;
 }
 
+/* Roter Hinweis-Banner oben */
+.update-banner {
+    width: 100%;
+    background-color: #c62828; /* kräftiges Rot */
+    color: white;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 9999;
+    position: sticky; /* bleibt oben sichtbar */
+    top: 0;
+    left: 0;
+}
 
 
 header {
