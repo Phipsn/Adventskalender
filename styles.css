@@ -48,7 +48,7 @@ header {
 /* Mittelgroße Bildschirme */
 @media (min-width: 764px) {
     header {
-        background-image: url('images/Untitled design-7.png'); /* Bild mit näheren Figuren */
+        background-image: url('images/MR.jpeg'); /* Bild mit näheren Figuren */
     }
     h1 {
         font-size: 36px;
@@ -63,7 +63,7 @@ header {
 /* Kleinere Bildschirme */
 @media (max-width: 763px) {
     header {
-        background-image: url('images/mur.jpeg'); /* Bild mit noch näheren Figuren */
+        background-image: url('images/MR.jpeg'); /* Bild mit noch näheren Figuren */
     }
     h1 {
         font-size: 36px;
