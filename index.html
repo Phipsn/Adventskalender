@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2026-3">
 </head>
 <body class="home">
 
@@ -90,14 +90,40 @@
             <p class="eyebrow dark">29. November bis 24. Dezember</p>
             <h2 class="section-title">Der Kalender</h2>
             <p class="calendar-intro">Jeden Tag eine Geschichte von AIfred. An den grünen Türchen wartet ein Rätsel, am goldenen das Finale.</p>
-            <div class="doors" id="doors"></div>
+            <div class="doors" id="doors">
+                <div class="door riddle" data-date="2026-11-29"><span class="door-tag">Rätsel</span><span class="door-wd">So</span><span class="door-num">29</span><span class="door-advent">1. Advent</span></div>
+                <div class="door story" data-date="2026-11-30"><span class="door-wd">Mo</span><span class="door-num">30</span></div>
+                <div class="door story" data-date="2026-12-01"><span class="door-wd">Di</span><span class="door-num">1</span></div>
+                <div class="door riddle" data-date="2026-12-02"><span class="door-tag">Rätsel</span><span class="door-wd">Mi</span><span class="door-num">2</span></div>
+                <div class="door story" data-date="2026-12-03"><span class="door-wd">Do</span><span class="door-num">3</span></div>
+                <div class="door story" data-date="2026-12-04"><span class="door-wd">Fr</span><span class="door-num">4</span></div>
+                <div class="door riddle" data-date="2026-12-05"><span class="door-tag">Rätsel</span><span class="door-wd">Sa</span><span class="door-num">5</span></div>
+                <div class="door riddle" data-date="2026-12-06"><span class="door-tag">Rätsel</span><span class="door-wd">So</span><span class="door-num">6</span><span class="door-advent">2. Advent</span></div>
+                <div class="door story" data-date="2026-12-07"><span class="door-wd">Mo</span><span class="door-num">7</span></div>
+                <div class="door story" data-date="2026-12-08"><span class="door-wd">Di</span><span class="door-num">8</span></div>
+                <div class="door riddle" data-date="2026-12-09"><span class="door-tag">Rätsel</span><span class="door-wd">Mi</span><span class="door-num">9</span></div>
+                <div class="door story" data-date="2026-12-10"><span class="door-wd">Do</span><span class="door-num">10</span></div>
+                <div class="door story" data-date="2026-12-11"><span class="door-wd">Fr</span><span class="door-num">11</span></div>
+                <div class="door riddle" data-date="2026-12-12"><span class="door-tag">Rätsel</span><span class="door-wd">Sa</span><span class="door-num">12</span></div>
+                <div class="door riddle" data-date="2026-12-13"><span class="door-tag">Rätsel</span><span class="door-wd">So</span><span class="door-num">13</span><span class="door-advent">3. Advent</span></div>
+                <div class="door story" data-date="2026-12-14"><span class="door-wd">Mo</span><span class="door-num">14</span></div>
+                <div class="door story" data-date="2026-12-15"><span class="door-wd">Di</span><span class="door-num">15</span></div>
+                <div class="door riddle" data-date="2026-12-16"><span class="door-tag">Rätsel</span><span class="door-wd">Mi</span><span class="door-num">16</span></div>
+                <div class="door story" data-date="2026-12-17"><span class="door-wd">Do</span><span class="door-num">17</span></div>
+                <div class="door story" data-date="2026-12-18"><span class="door-wd">Fr</span><span class="door-num">18</span></div>
+                <div class="door riddle" data-date="2026-12-19"><span class="door-tag">Rätsel</span><span class="door-wd">Sa</span><span class="door-num">19</span></div>
+                <div class="door final" data-date="2026-12-20"><span class="door-tag">Finale</span><span class="door-wd">So</span><span class="door-num">20</span><span class="door-advent">4. Advent</span></div>
+                <div class="door after" data-date="2026-12-21"><span class="door-wd">Mo</span><span class="door-num">21</span></div>
+                <div class="door after" data-date="2026-12-22"><span class="door-wd">Di</span><span class="door-num">22</span></div>
+                <div class="door after" data-date="2026-12-23"><span class="door-wd">Mi</span><span class="door-num">23</span></div>
+                <div class="door winner" data-date="2026-12-24"><span class="door-tag">Gewinner:in</span><span class="door-wd">Do</span><span class="door-num">24</span></div>
+            </div>
             <div class="door-legend">
                 <span><i class="dot story"></i>Geschichte</span>
                 <span><i class="dot riddle"></i>Neues Rätsel</span>
                 <span><i class="dot final"></i>Finale am 4. Advent, 12 Uhr</span>
                 <span><i class="dot winner"></i>Gewinner:in</span>
             </div>
-            <noscript><img src="images/kalender2026.png" alt="Rätsel-Adventskalender 2026" class="img-fluid"></noscript>
             <a class="calendar-download" href="images/kalender2026.png" target="_blank">Kalender als Bild ansehen</a>
         </div>
     </section>
@@ -267,6 +293,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=2026-3"></script>
 </body>
 </html>

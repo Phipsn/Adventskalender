@@ -24,37 +24,14 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ---------- Türchen-Kalender ----------
-(function buildDoors() {
-    const grid = document.getElementById('doors');
-    if (!grid) return;
-
-    const start = new Date(2026, 10, 29); // 29. November 2026 (1. Advent)
-    const end = new Date(2026, 11, 24);   // 24. Dezember 2026
+// ---------- Türchen-Kalender: vergangene Tage und heute markieren ----------
+(function markDoors() {
     const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    const weekdays = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
-    const advents = { '29.11': '1. Advent', '6.12': '2. Advent', '13.12': '3. Advent', '20.12': '4. Advent' };
-
-    for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
-        const key = d.getDate() + '.' + (d.getMonth() + 1);
-        const wd = d.getDay();
-        let type = 'story', tag = '';
-        if (d > new Date(2026, 11, 20)) { type = 'after'; }
-        if (wd === 0 || wd === 3 || wd === 6 || key === '29.11') { type = 'riddle'; tag = 'Rätsel'; }
-        if (key === '20.12') { type = 'final'; tag = 'Finale'; }
-        if (key === '24.12') { type = 'winner'; tag = 'Gewinner:in'; }
-        if (d > new Date(2026, 11, 20) && type === 'riddle') { type = 'after'; tag = ''; }
-
-        const door = document.createElement('div');
-        door.className = 'door ' + type + (d < today ? ' past' : '') + (d.getTime() === today.getTime() ? ' today' : '');
-        door.innerHTML =
-            (tag ? `<span class="door-tag">${tag}</span>` : '') +
-            `<span class="door-wd">${weekdays[wd]}</span>` +
-            `<span class="door-num">${d.getDate()}</span>` +
-            (advents[key] ? `<span class="door-advent">${advents[key]}</span>` : '');
-        grid.appendChild(door);
-    }
+    const iso = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+    document.querySelectorAll('.door[data-date]').forEach(door => {
+        if (door.dataset.date < iso) door.classList.add('past');
+        if (door.dataset.date === iso) door.classList.add('today');
+    });
 })();
 
 // ---------- Mobiles Menü nach Klick schließen ----------
