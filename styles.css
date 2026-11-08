@@ -34,6 +34,20 @@ header {
     color: white;
 }
 
+/* Dunkle Fläche hinter dem Header-Text, damit er auf dem hellen Bild 2026 lesbar bleibt */
+.header-text {
+    background-color: rgba(20, 50, 40, 0.6);
+    border-radius: 14px;
+    padding: 20px 24px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+.header-text h1, .header-text #h6 {
+    background-color: transparent !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.header-text #h6 { margin-bottom: 0; }
+
 /* Größere Bildschirme (Standardbild bleibt erhalten) */
 /* @media (min-width: 992px) {
     header {
@@ -48,7 +62,7 @@ header {
 /* Mittelgroße Bildschirme */
 @media (min-width: 764px) {
     header {
-        background-image: url('images/MR.jpeg'); /* Bild mit näheren Figuren */
+        background-image: url('images/header2026.jpg'); /* Bild mit näheren Figuren */
     }
     h1 {
         font-size: 36px;
@@ -63,7 +77,7 @@ header {
 /* Kleinere Bildschirme */
 @media (max-width: 763px) {
     header {
-        background-image: url('images/MR.jpeg'); /* Bild mit noch näheren Figuren */
+        background-image: url('images/header2026.jpg'); /* Bild mit noch näheren Figuren */
     }
     h1 {
         font-size: 36px;
