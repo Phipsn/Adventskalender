@@ -7,7 +7,7 @@
     <meta name="description" content="Der Mats &amp; Roxy Rätsel-Adventskalender 2026: Advents-Rätselspaß mit AIfred, ein echter Goldschatz und ein guter Zweck.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -39,10 +39,20 @@
 
     <!-- Hero -->
     <header class="hero" id="top">
+        <div class="snow" aria-hidden="true"></div>
         <div class="hero-content container">
             <p class="eyebrow">Advent 2026</p>
             <h1>Der Mats &amp; Roxy<br>Rätsel-Adventskalender</h1>
             <p class="hero-sub">Advents-Rätselspaß mit AIfred</p>
+            <div class="countdown" id="countdown" hidden>
+                <p class="countdown-label" id="countdownLabel"></p>
+                <div class="countdown-boxes">
+                    <div><b id="cdDays">0</b><span>Tage</span></div>
+                    <div><b id="cdHours">0</b><span>Std</span></div>
+                    <div><b id="cdMinutes">0</b><span>Min</span></div>
+                    <div><b id="cdSeconds">0</b><span>Sek</span></div>
+                </div>
+            </div>
             <div class="hero-actions">
                 <a class="btn-main" href="https://wa.me/4915234796360" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Jetzt mitmachen</a>
                 <a class="btn-ghost" href="#calendar">Zum Kalender</a>
@@ -79,9 +89,16 @@
         <div class="container">
             <p class="eyebrow dark">29. November bis 24. Dezember</p>
             <h2 class="section-title">Der Kalender</h2>
-            <div class="calendar-frame">
-                <img src="images/kalender2026.png" alt="Rätsel-Adventskalender 2026: Rätsel am 1. Advent und jeden Mittwoch, Samstag und Sonntag, Finale am 20. Dezember" class="img-fluid">
+            <p class="calendar-intro">Jeden Tag eine Geschichte von AIfred. An den grünen Türchen wartet ein Rätsel, am goldenen das Finale.</p>
+            <div class="doors" id="doors"></div>
+            <div class="door-legend">
+                <span><i class="dot story"></i>Geschichte</span>
+                <span><i class="dot riddle"></i>Neues Rätsel</span>
+                <span><i class="dot final"></i>Finale am 4. Advent, 12 Uhr</span>
+                <span><i class="dot winner"></i>Gewinner:in</span>
             </div>
+            <noscript><img src="images/kalender2026.png" alt="Rätsel-Adventskalender 2026" class="img-fluid"></noscript>
+            <a class="calendar-download" href="images/kalender2026.png" target="_blank">Kalender als Bild ansehen</a>
         </div>
     </section>
 
