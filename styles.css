@@ -285,6 +285,8 @@ section { padding: 88px 0; }
     color: var(--berry);
 }
 .door.riddle { background: var(--forest); color: #f3d98e; }
+.door.intro { background: #fffaf0; color: var(--forest); box-shadow: inset 0 0 0 2px var(--gold); }
+.door.intro .door-tag { color: var(--gold); }
 .door.riddle .door-advent, .door.final .door-advent { color: #f3d98e; }
 .door.final { background: linear-gradient(135deg, #e2b85a, #9b7224); color: #fff; box-shadow: 0 0 0 3px #f3d98e66; }
 .door.winner { background: var(--berry); color: #fff; }
@@ -302,6 +304,7 @@ section { padding: 88px 0; }
 }
 .dot { display: inline-block; width: 12px; height: 12px; border-radius: 4px; margin-right: 6px; vertical-align: -1px; }
 .dot.story { background: #e8dcc4; }
+.dot.intro { background: #fffaf0; box-shadow: inset 0 0 0 2px var(--gold); }
 .dot.riddle { background: var(--forest); }
 .dot.final { background: #c9962f; }
 .dot.winner { background: var(--berry); }
