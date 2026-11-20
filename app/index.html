@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rätsel-App · Mats &amp; Roxy</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="../index.html">Mats &amp; Roxy <span>Rätsel</span></a>
+            <div class="user" id="userBox" hidden>
+                <span class="who" id="userName"></span>
+                <button class="btn small ghost" id="logoutBtn">Abmelden</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <!-- Noch nicht eingerichtet -->
+        <section data-view="setup" hidden>
+            <div class="card center">
+                <h1>Bald geht's los</h1>
+                <p class="lead">Die Rätsel-App wird gerade vorbereitet. Schau bald wieder vorbei!</p>
+            </div>
+        </section>
+
+        <!-- Laden -->
+        <section data-view="loading">
+            <div class="card center"><p class="lead">Einen Moment …</p></div>
+        </section>
+
+        <!-- Anmelden -->
+        <section data-view="login" hidden>
+            <div class="card">
+                <span class="eyebrow">Advent 2026</span>
+                <h1>Anmelden</h1>
+                <p class="lead">Gib deine E-Mail-Adresse ein. Du bekommst einen Link, mit dem du dich ohne Passwort anmeldest.</p>
+                <form id="loginForm" class="inline-form">
+                    <input type="email" id="loginEmail" placeholder="deine@email.de" required autocomplete="email">
+                    <button class="btn gold" type="submit">Link senden</button>
+                </form>
+                <p class="muted" id="loginSent" hidden>Schau in dein Postfach (auch im Spam-Ordner) und klicke auf den Link. Du kannst dieses Fenster schließen.</p>
+            </div>
+        </section>
+
+        <!-- Angemeldet, aber noch nicht freigeschaltet -->
+        <section data-view="pending" hidden>
+            <div class="card">
+                <span class="eyebrow">Fast geschafft</span>
+                <h1>Willkommen!</h1>
+                <p>Du bist angemeldet. Sobald deine Teilnahmegebühr von 5 € angekommen ist, schalten wir dich frei. Dann siehst du hier alle Rätsel.</p>
+                <p class="muted">Noch nicht bezahlt? Alle Infos stehen auf der <a href="../index.html#faqs">Website</a>.</p>
+                <label for="pendingName">Wie sollen wir dich nennen?</label>
+                <form class="inline-form name-form">
+                    <input type="text" class="name-input" id="pendingName" maxlength="60" placeholder="Vor- und Nachname oder Spitzname" required>
+                    <button class="btn" type="submit">Speichern</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Rätsel -->
+        <section data-view="main" hidden>
+            <div class="card" id="nameCard" hidden>
+                <h2>Wie sollen wir dich nennen?</h2>
+                <p class="muted">Der Name erscheint nur bei uns in der Auswertung.</p>
+                <form class="inline-form name-form">
+                    <input type="text" class="name-input" maxlength="60" placeholder="Vor- und Nachname oder Spitzname" required>
+                    <button class="btn" type="submit">Speichern</button>
+                </form>
+            </div>
+            <div class="countdown" id="countdown" hidden>
+                <span>Das nächste Rätsel erscheint in</span>
+                <strong id="countdownValue"></strong>
+            </div>
+            <div id="entries"></div>
+            <div class="card center" id="emptyState" hidden>
+                <h2>Noch ist alles still</h2>
+                <p class="lead">Das erste Rätsel erscheint hier, sobald es losgeht.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

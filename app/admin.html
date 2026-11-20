@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Rätsel-Admin · Mats &amp; Roxy</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="index.html">Mats &amp; Roxy <span>Admin</span></a>
+            <div class="user" id="userBox" hidden>
+                <span class="who" id="userName"></span>
+                <button class="btn small ghost" id="logoutBtn">Abmelden</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="wrap wide">
+        <section data-view="setup" hidden>
+            <div class="card">
+                <h1>Noch nicht eingerichtet</h1>
+                <p>Trage die Supabase-Zugangsdaten in <code>app/config.js</code> ein. Die Anleitung steht in <code>supabase/ANLEITUNG.md</code>.</p>
+            </div>
+        </section>
+
+        <section data-view="loading">
+            <div class="card center"><p class="lead">Einen Moment …</p></div>
+        </section>
+
+        <section data-view="login" hidden>
+            <div class="card" style="max-width:560px;margin:0 auto">
+                <h1>Admin-Anmeldung</h1>
+                <p class="lead">Du bekommst einen Anmelde-Link per E-Mail.</p>
+                <form id="loginForm" class="inline-form">
+                    <input type="email" id="loginEmail" placeholder="deine@email.de" required autocomplete="email">
+                    <button class="btn gold" type="submit">Link senden</button>
+                </form>
+            </div>
+        </section>
+
+        <section data-view="denied" hidden>
+            <div class="card center">
+                <h1>Kein Zugriff</h1>
+                <p class="lead">Dieses Konto ist kein Admin. <a href="index.html">Zur Rätsel-Seite</a></p>
+            </div>
+        </section>
+
+        <section data-view="main" hidden>
+            <nav class="tabs" id="tabs">
+                <button data-tab="raetsel" class="active">Rätsel</button>
+                <button data-tab="teilnehmer">Teilnehmer</button>
+                <button data-tab="abgaben">Abgaben</button>
+                <button data-tab="rangliste">Rangliste</button>
+            </nav>
+
+            <!-- Rätsel verwalten -->
+            <div data-tab-panel="raetsel">
+                <div class="split">
+                    <div class="card" style="padding:16px">
+                        <div class="row" style="justify-content:space-between;padding:0 6px 10px">
+                            <strong>Alle Einträge</strong>
+                            <button class="btn small gold" id="newEntryBtn">+ Neu</button>
+                        </div>
+                        <ul class="entry-list" id="entryList"></ul>
+                    </div>
+
+                    <form class="card" id="entryForm" hidden>
+                        <div class="row" style="justify-content:space-between">
+                            <h2 id="formTitle" style="margin:0">Neues Rätsel</h2>
+                            <button type="button" class="btn small danger" id="deleteBtn">Löschen</button>
+                        </div>
+
+                        <label for="f-title">Titel</label>
+                        <input type="text" id="f-title" required placeholder="z. B. 1. Advent: Die verschwundene Kerze">
+
+                        <div class="editor-grid">
+                            <div>
+                                <label for="f-kind">Art</label>
+                                <select id="f-kind">
+                                    <option value="raetsel">Rätsel (mit Antwort)</option>
+                                    <option value="geschichte">Geschichte (ohne Antwort)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="f-release">Erscheint am</label>
+                                <input type="datetime-local" id="f-release" required>
+                            </div>
+                        </div>
+
+                        <label>Canva-Export oder Bilder hochladen</label>
+                        <p class="muted" style="margin:0">In Canva auf „Teilen › Herunterladen“ als PNG, JPG oder PDF. Mehrere Dateien gehen auch, die Reihenfolge lässt sich ändern.</p>
+                        <div id="fileList"></div>
+                        <div class="drop" id="drop">Dateien hierher ziehen oder <u>auswählen</u></div>
+                        <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp,image/gif,application/pdf" multiple hidden>
+
+                        <label for="body">Text (optional)</label>
+                        <div class="toolbar">
+                            <button type="button" data-fmt="bold"><b>F</b> fett</button>
+                            <button type="button" data-fmt="italic"><i>K</i> kursiv</button>
+                            <button type="button" data-fmt="h1">Überschrift</button>
+                            <button type="button" data-fmt="h2">Zwischentitel</button>
+                            <button type="button" data-fmt="hr">Trennlinie</button>
+                        </div>
+                        <div class="editor-grid">
+                            <textarea id="body" placeholder="Hier kannst du die Geschichte oder Hinweise schreiben. Leerzeile = neuer Absatz."></textarea>
+                            <div class="preview entry-body" id="preview"><p class="muted">Vorschau</p></div>
+                        </div>
+
+                        <div id="solutionBlock">
+                            <label for="f-solutions">Richtige Antworten (eine pro Zeile)</label>
+                            <textarea id="f-solutions" style="min-height:80px" placeholder="Weihnachtsmann&#10;Santa Claus"></textarea>
+                            <p class="muted" style="margin:6px 0 0">Groß- und Kleinschreibung, Leerzeichen und Satzzeichen werden ignoriert. Teilnehmer sehen die Lösung nie.</p>
+                        </div>
+
+                        <label style="margin-top:20px">Einstellungen</label>
+                        <label class="check"><input type="checkbox" id="f-published"> Veröffentlichen (sonst Entwurf)</label>
+                        <label class="check" id="finalCheck"><input type="checkbox" id="f-final"> Finalrätsel (entscheidet über den Sieg)</label>
+                        <label class="check" id="revealCheck"><input type="checkbox" id="f-reveal"> Teilnehmer sehen sofort, ob ihre Antwort richtig ist</label>
+
+                        <div class="row end" style="margin-top:20px">
+                            <button type="button" class="btn ghost" id="previewBtn">Vorschau als Teilnehmer</button>
+                            <button type="submit" class="btn gold">Speichern</button>
+                        </div>
+                    </form>
+
+                    <div class="card center" id="noSelection">
+                        <p class="lead">Wähle links einen Eintrag oder lege ein neues Rätsel an.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Teilnehmer -->
+            <div data-tab-panel="teilnehmer" hidden>
+                <div class="card">
+                    <h2>Teilnehmer</h2>
+                    <p class="muted">Nach dem ersten Login erscheint hier jede Person. Schalte sie frei, sobald die 5 € angekommen sind.</p>
+                    <div class="table-wrap"><table>
+                        <thead><tr><th>Name</th><th>E-Mail</th><th>Angemeldet</th><th>Freigeschaltet</th><th>Admin</th></tr></thead>
+                        <tbody id="userRows"></tbody>
+                    </table></div>
+                </div>
+            </div>
+
+            <!-- Abgaben -->
+            <div data-tab-panel="abgaben" hidden>
+                <div class="card">
+                    <h2>Abgaben</h2>
+                    <label for="subEntry">Rätsel</label>
+                    <select id="subEntry"></select>
+                    <div class="table-wrap" style="margin-top:16px"><table>
+                        <thead><tr><th>#</th><th>Name</th><th>Antwort</th><th>Zeitpunkt (Server)</th><th>Richtig?</th></tr></thead>
+                        <tbody id="subRows"></tbody>
+                    </table></div>
+                </div>
+            </div>
+
+            <!-- Rangliste -->
+            <div data-tab-panel="rangliste" hidden>
+                <div class="card">
+                    <div class="row" style="justify-content:space-between">
+                        <h2 style="margin:0">Rangliste</h2>
+                        <button class="btn small ghost" id="rankRefresh">Aktualisieren</button>
+                    </div>
+                    <p class="muted">Wer das Finalrätsel zuerst richtig löst und alle vorherigen Rätsel gelöst hat, gewinnt. Danach zählt die Zahl der richtigen Antworten.</p>
+                    <div class="table-wrap"><table>
+                        <thead><tr><th>Platz</th><th>Name</th><th>Richtig</th><th>Alle vorherigen?</th><th>Finale gelöst um</th></tr></thead>
+                        <tbody id="rankRows"></tbody>
+                    </table></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vorschau-Dialog -->
+        <div id="previewModal" hidden style="position:fixed;inset:0;background:rgba(20,42,35,.6);z-index:40;overflow:auto;padding:24px 16px">
+            <div style="max-width:760px;margin:0 auto">
+                <div class="row end" style="margin-bottom:12px"><button class="btn small gold" id="closePreview">Schließen</button></div>
+                <div id="previewContent"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="config.js"></script>
+    <script src="common.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
