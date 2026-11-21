@@ -1,8 +1,9 @@
 // ---------- Countdown ----------
 // Bis zum 1. Advent, danach bis zum Finale am 4. Advent (12:00 Uhr).
+const isEnglish = document.documentElement.lang === 'en';
 const countdownTargets = [
-    { date: new Date('2026-11-29T00:00:00+01:00'), label: 'Bis zum 1. Advent' },
-    { date: new Date('2026-12-20T12:00:00+01:00'), label: 'Bis zum Finale am 4. Advent' }
+    { date: new Date('2026-11-29T00:00:00+01:00'), label: isEnglish ? 'Until the 1st Sunday of Advent' : 'Bis zum 1. Advent' },
+    { date: new Date('2026-12-20T12:00:00+01:00'), label: isEnglish ? 'Until the finale on the 4th Sunday of Advent' : 'Bis zum Finale am 4. Advent' }
 ];
 
 function updateCountdown() {

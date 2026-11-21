@@ -1,301 +1,302 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riddle Advent Calendar</title>
+    <meta name="description" content="The Mats &amp; Roxy Riddle Advent Calendar 2026: Advent riddle fun with AIfred, a real gold treasure and a good cause.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="alternate" hreflang="de" href="index.html">
+    <link rel="stylesheet" href="styles.css?v=2026-5">
 </head>
-<body>
+<body class="home">
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand text-white" href="#">Mats and Roxy Riddle Advent Calendar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
-                <li class="nav-item"><a class="nav-link" href="#rules">Rules</a></li>
-                <li class="nav-item"><a class="nav-link" href="#prizes">Prizes</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
-                <!-- Instagram Icon -->
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.instagram.com/matsundroxy" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                </li>
-                 <!-- Language Toggle Button -->
-                 <li class="nav-item">
-                   <a href="index.html">
-                    <button id="languageToggle" class="btn btn-light">DE</button>
-                   </a> 
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-    <!-- Header -->
-    <header class="bg-cover text-white text-center">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg site-nav sticky-top">
         <div class="container">
-            <h1>The Mats & Roxy Riddle Advent Calendar</h1>
-            <p id="h6">Advent riddle fun for the whole family with Mats and Roxy</p> 
+            <a class="navbar-brand" href="#top">Mats &amp; Roxy <span>Riddle Advent Calendar</span></a>
+            <a class="lang-mobile d-lg-none ms-auto me-2" href="index.html" hreflang="de" lang="de">DE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rules">How it works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prizes">Prizes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faqs">FAQs</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/matsundroxy" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </li>
+                    <li class="nav-item lang-switch">
+                        <a class="nav-link" href="index.html" hreflang="de" lang="de" title="Deutsche Version">DE | <span class="active-lang">EN</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="top">
+        <div class="snow" aria-hidden="true"></div>
+        <div class="hero-content container">
+            <p class="eyebrow">Advent 2026</p>
+            <h1>The Mats &amp; Roxy<br>Riddle Advent Calendar</h1>
+            <p class="hero-sub">Advent riddle fun with AIfred</p>
+            <div class="countdown" id="countdown" hidden>
+                <p class="countdown-label" id="countdownLabel"></p>
+                <div class="countdown-boxes">
+                    <div><b id="cdDays">0</b><span>Days</span></div>
+                    <div><b id="cdHours">0</b><span>Hrs</span></div>
+                    <div><b id="cdMinutes">0</b><span>Min</span></div>
+                    <div><b id="cdSeconds">0</b><span>Sec</span></div>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <a class="btn-main" href="https://wa.me/4915234796360" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Join now</a>
+                <a class="btn-ghost" href="#calendar">See the calendar</a>
+            </div>
         </div>
     </header>
 
-    <!-- Calendar Section -->
-    <section id="calendar" class="py-5 text-center">
+    <!-- Intro -->
+    <section class="intro">
         <div class="container">
-            <h2>Participate in the Riddle Advent Calendar, get to know Mats and Roxy in charming short stories, win a real gold treasure, and support a good cause!</h2>
-            <img src="images/english_calendar.png" alt="Riddle Advent Calendar" class="img-fluid calendar-image">
-        </div>
-    </section>
-
-   <!-- Rules Section -->
-<section id="rules" class="py-5">
-    <div class="container">
-        <p class="rules-paragraph highlight">Daily short stories with Mats and Roxy and riddles on Wednesday, Saturday and Sunday. The riddles will be published simultaneously for everyone via Whatsapp Broadcast message and build on each other. The person who solves the last riddle first on the 4th of Advent (December 22, 2024) will win a real gold bar!</p>        
-    </div>
-</section>
-
-    <!-- Prizes Section -->
-    <section id="prizes" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2>Prizes</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/gold.png" class="card-img-top" alt="5g Gold Bar">
-                        <div class="card-body">
-                            <h3>1st Prize</h3>
-                            <p>A real gold bar (5g)* </p>
-                            <p style="font-size: small;">*10g if more than 200 participants</p>
-                        </div>
-                    </div>
+            <h2 class="lead-title">Join the riddle Advent calendar with a real gold treasure, travel through time &amp; the world and support a good cause!</h2>
+            <div class="features">
+                <div class="feature">
+                    <span class="feature-icon"><i class="fas fa-coins"></i></span>
+                    <h3>Real gold treasure</h3>
+                    <p>Whoever solves the last riddle first on the 4th Sunday of Advent wins a gold coin.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/maplegold110.png" class="card-img-top" alt="Maple Leaf Gold Coin 1 oz">
-                        <div class="card-body">
-                            <h3>2nd Prize</h3>
-                            <p>A real Maple Leaf Gold Coin (1/10 oz)</p>
-                        </div>
-                    </div>
+                <div class="feature">
+                    <span class="feature-icon"><i class="fas fa-globe-europe"></i></span>
+                    <h3>Through time &amp; the world</h3>
+                    <p>Daily short stories with AIfred and tricky riddles that build on each other.</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="images/maplesilver.png" class="card-img-top" alt="Maple Leaf Silver Coin 1 oz">
-                        <div class="card-body">
-                            <h3>3rd Prize</h3>
-                            <p>A real Maple Leaf Silver Coin (1 oz)</p>
-                        </div>
-                    </div>
+                <div class="feature">
+                    <span class="feature-icon"><i class="fas fa-heart"></i></span>
+                    <h3>Good cause</h3>
+                    <p>Taking part costs €5. All of it goes to the prizes and to charity.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Button for flyer download -->
-<a href="docs/Mats&Roxy Raetsel-Adventskalender.pdf" download="Flyer" class="download-button" style="margin-bottom: 20px">
-    <button>Download Info Flyer (German)</button>
-</a>
-<a href="docs/Mats&Roxy riddle advent calendar.png" download="Flyer" class="download-button">
-    <button>Download Info Flyer (English)</button>
-</a>
+    <!-- Calendar -->
+    <section id="calendar" class="calendar-section">
+        <div class="container">
+            <p class="eyebrow dark">29 November to 24 December</p>
+            <h2 class="section-title">The calendar</h2>
+            <p class="calendar-intro">A story from AIfred every day. Behind the green doors there is a riddle, behind the golden one the finale.</p>
+            <div class="doors" id="doors">
+                <div class="door intro" data-date="2026-11-29"><span class="door-tag">Intro</span><span class="door-wd">Sun</span><span class="door-num">29</span><span class="door-advent">1st Advent</span></div>
+                <div class="door story" data-date="2026-11-30"><span class="door-wd">Mon</span><span class="door-num">30</span></div>
+                <div class="door story" data-date="2026-12-01"><span class="door-wd">Tue</span><span class="door-num">1</span></div>
+                <div class="door riddle" data-date="2026-12-02"><span class="door-tag">Riddle</span><span class="door-wd">Wed</span><span class="door-num">2</span></div>
+                <div class="door story" data-date="2026-12-03"><span class="door-wd">Thu</span><span class="door-num">3</span></div>
+                <div class="door story" data-date="2026-12-04"><span class="door-wd">Fri</span><span class="door-num">4</span></div>
+                <div class="door riddle" data-date="2026-12-05"><span class="door-tag">Riddle</span><span class="door-wd">Sat</span><span class="door-num">5</span></div>
+                <div class="door riddle" data-date="2026-12-06"><span class="door-tag">Riddle</span><span class="door-wd">Sun</span><span class="door-num">6</span><span class="door-advent">2nd Advent</span></div>
+                <div class="door story" data-date="2026-12-07"><span class="door-wd">Mon</span><span class="door-num">7</span></div>
+                <div class="door story" data-date="2026-12-08"><span class="door-wd">Tue</span><span class="door-num">8</span></div>
+                <div class="door riddle" data-date="2026-12-09"><span class="door-tag">Riddle</span><span class="door-wd">Wed</span><span class="door-num">9</span></div>
+                <div class="door story" data-date="2026-12-10"><span class="door-wd">Thu</span><span class="door-num">10</span></div>
+                <div class="door story" data-date="2026-12-11"><span class="door-wd">Fri</span><span class="door-num">11</span></div>
+                <div class="door riddle" data-date="2026-12-12"><span class="door-tag">Riddle</span><span class="door-wd">Sat</span><span class="door-num">12</span></div>
+                <div class="door riddle" data-date="2026-12-13"><span class="door-tag">Riddle</span><span class="door-wd">Sun</span><span class="door-num">13</span><span class="door-advent">3rd Advent</span></div>
+                <div class="door story" data-date="2026-12-14"><span class="door-wd">Mon</span><span class="door-num">14</span></div>
+                <div class="door story" data-date="2026-12-15"><span class="door-wd">Tue</span><span class="door-num">15</span></div>
+                <div class="door riddle" data-date="2026-12-16"><span class="door-tag">Riddle</span><span class="door-wd">Wed</span><span class="door-num">16</span></div>
+                <div class="door story" data-date="2026-12-17"><span class="door-wd">Thu</span><span class="door-num">17</span></div>
+                <div class="door story" data-date="2026-12-18"><span class="door-wd">Fri</span><span class="door-num">18</span></div>
+                <div class="door riddle" data-date="2026-12-19"><span class="door-tag">Riddle</span><span class="door-wd">Sat</span><span class="door-num">19</span></div>
+                <div class="door final" data-date="2026-12-20"><span class="door-tag">Finale</span><span class="door-wd">Sun</span><span class="door-num">20</span><span class="door-advent">4th Advent</span></div>
+                <div class="door after" data-date="2026-12-21"><span class="door-wd">Mon</span><span class="door-num">21</span></div>
+                <div class="door after" data-date="2026-12-22"><span class="door-wd">Tue</span><span class="door-num">22</span></div>
+                <div class="door after" data-date="2026-12-23"><span class="door-wd">Wed</span><span class="door-num">23</span></div>
+                <div class="door winner" data-date="2026-12-24"><span class="door-tag">Winner</span><span class="door-wd">Thu</span><span class="door-num">24</span></div>
+            </div>
+            <div class="door-legend">
+                <span><i class="dot intro"></i>Intro</span>
+                <span><i class="dot story"></i>Story</span>
+                <span><i class="dot riddle"></i>New riddle</span>
+                <span><i class="dot final"></i>Finale on the 4th Sunday of Advent, 12 noon</span>
+                <span><i class="dot winner"></i>Winner</span>
+            </div>
+            <a class="calendar-download" href="images/kalender2026.png?v=2026-4" target="_blank">View the calendar as an image (German)</a>
+        </div>
+    </section>
 
-  <!-- FAQ Section-->
-<section id="faqs">
-    <h2>Frequently Asked Questions (FAQs)</h2>
-    
-    <h3>General</h3>
-    
-    <div class="faq">
-        <button class="faq-question">1. How do I participate? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>By sending a WhatsApp message to <a href="https://wa.me/4915234796360">+49 1523 4796360</a> or an email to <a href="mailto: matsundroxy@gmail.com">matsundroxy@gmail.com</a> and paying the participation fee of 5 €. You will be assigned a participant number, and you can get started.</p>
+    <!-- Rules -->
+    <section id="rules" class="rules-section">
+        <div class="container">
+            <h2 class="section-title">How it works</h2>
+            <ol class="steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <h3>Sign up</h3>
+                    <p>Message us on WhatsApp or by email and pay the €5 entry fee.</p>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <h3>Solve riddles</h3>
+                    <p>It all starts on the 1st Sunday of Advent with an intro. After that there are daily short stories with AIfred and riddles every Wednesday, Saturday and Sunday. The riddles are sent to everyone at the same time via WhatsApp broadcast and build on each other.</p>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <h3>Win</h3>
+                    <p>The person who solves the last riddle first on the 4th Sunday of Advent (20 December 2026) wins a real gold coin!</p>
+                </li>
+            </ol>
         </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">2. How does it work? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>You will receive 3 riddles per week in short stories via WhatsApp (preferred) or email – on Saturday & Sunday at 12 PM, and Wednesday at 7 PM. On the other days, you will receive short stories from Mats and Roxy. However, these stories will not contain any clues for the riddles.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">3. What do I need to participate? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>A mobile phone, WhatsApp or email, and internet access.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">4. How do I answer the riddles? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>Answers should be sent as a message via WhatsApp (preferred) or email. Clear instructions are provided in the riddles. Always only answer the riddles and do not send other messages during the riddle period. The first answer counts, and any answer sent cannot be deleted or edited!</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">5. How is the winner determined? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The person who solves the last riddle first on the 4th Advent wins. All previous riddles must be solved. If no one solves the last riddle, the person with the most correct answers in the given time wins. If there's a tie (several people with the same number of correct answers in the given time), a "tiebreaker riddle" on December 24th will determine the winner. Relevant participants will be informed in advance.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">6. What happens to the money? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The entire participation fee will be fully allocated to prizes and donations for charitable purposes. The use of funds will be transparently disclosed: donations will go to the "Kinderschutz-Zentrum Berlin e.V." and Welthungerhilfe. Regardless of the number of participants, I guarantee a minimum donation of €100 in total. Any remaining funds after covering the costs of the prizes will also be donated to these two organizations.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">7. What happens to my data? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>Your number/email will be kept confidential and will not be shared in a WhatsApp group. Riddles will be sent via broadcast or email, and no data will be shared with third parties.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">8. Why is this happening? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>For the fun of solving riddles, the passion for writing, and the joy of Advent calendars!</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">9. Is this illegal gambling/lottery? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>No, prize riddles with logical riddles are not covered by § 287 StGB (according to Schönke/Schröder/Heine/Hecker StGB § 287 Rn.5 and § 284 Rn.7), and are not considered gambling according to the GlüStV (see BVerwG, judgment of January 22, 2014 – 8 C 26/12).</p>
-        </div>
-    </div>
+    </section>
 
-    <div class="faq">
-        <button class="faq-question">10. What is the prize? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The fastest person on the 4th Advent wins a real 5g gold bar. If there are 200 participants, the prize increases to 10g. The second-place winner will receive a 1/10 ounce Maple Leaf gold coin, and the third-place winner will receive a 1 ounce Maple Leaf silver coin.</p>
-        </div>
-    </div>
+    <!-- Prizes -->
+    <section id="prizes" class="prizes-section">
+        <div class="container">
+            <h2 class="section-title">Prizes</h2>
+            <div class="prizes">
+                <div class="prize">
+                    <span class="coin gold">1</span>
+                    <h3>1st prize</h3>
+                    <p>Gold coin (1 g)</p>
+                </div>
+                <div class="prize">
+                    <span class="coin silver">2</span>
+                    <h3>2nd prize</h3>
+                    <p>Silver coin (1/2 oz)</p>
+                </div>
+                <div class="prize">
+                    <span class="coin bronze">3</span>
+                    <h3>3rd prize</h3>
+                    <p>A real ancient bronze coin</p>
+                </div>
+            </div>
+                    </div>
+    </section>
 
-    <div class="faq">
-        <button class="faq-question">11. Which good cause will be supported? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>By participating, you are also supporting a good cause. The donation goes to the <a href="https://www.kinderschutz-zentrum-berlin.de">Kinderschutz-Zentrum Berlin e.V.</a> and <a href="https://www.welthungerhilfe.de">Welthungerhilfe.</a></p>
+    <!-- FAQ -->
+    <section id="faqs" class="faq-section">
+        <div class="container faq-container">
+            <h2 class="section-title">Frequently asked questions</h2>
+            <h3 class="faq-group">General</h3>
+            <details class="faq">
+                <summary>How do I take part?</summary>
+                <div class="faq-answer"><p>Send a WhatsApp message to <a href="https://wa.me/4915234796360">+49 1523 4796360</a> or an email to <a href="mailto:matsundroxy@gmail.com">matsundroxy@gmail.com</a> and pay the entry fee of €5.</p></div>
+            </details>
+            <details class="faq">
+                <summary>How does it work?</summary>
+                <div class="faq-answer"><p>From the 1st Sunday of Advent (intro) you receive a short story every day via WhatsApp broadcast, plus a riddle every Wednesday, Saturday and Sunday.</p></div>
+            </details>
+            <details class="faq">
+                <summary>What do I need to take part?</summary>
+                <div class="faq-answer"><p>A phone with WhatsApp and internet access.</p></div>
+            </details>
+            <details class="faq">
+                <summary>How do I answer the riddles?</summary>
+                <div class="faq-answer"><p>You answer by WhatsApp message. Each riddle comes with exact instructions. Please only send your answers and no other messages while the riddles are running. Your first answer counts, and a sent answer must not be deleted or edited!</p></div>
+            </details>
+            <details class="faq">
+                <summary>How is the winner determined?</summary>
+                <div class="faq-answer"><p>The person who solves the riddle fastest on the 4th Sunday of Advent wins. To do so, all previous riddles must have been solved. If nobody solves the last riddle, the person who has solved the most riddles correctly by the end of the 4th Sunday of Advent wins. If there is still a tie (several people with the same number of correctly solved riddles), the winner is decided by a "tie-break riddle" on 24 December. The participants concerned will be informed in advance.</p></div>
+            </details>
+            <details class="faq">
+                <summary>What happens to the money?</summary>
+                <div class="faq-answer"><p>All entry fees are used entirely for the prizes and a donation to charity. How the money is used is disclosed openly: the donations go to Kinderschutz-Zentrum Berlin e.V., Platane 19 e.V. and Welthungerhilfe. Regardless of the number of participants, I guarantee a minimum donation of €100 in total. Any remaining amount after the cost of the prizes is also donated to these three organisations.</p></div>
+            </details>
+            <details class="faq">
+                <summary>What happens to my data?</summary>
+                <div class="faq-answer"><p>Your number is treated confidentially and is not shared in a WhatsApp group. Riddles are sent via broadcast, and no data is passed on to third parties.</p></div>
+            </details>
+            <details class="faq">
+                <summary>Why do we do this?</summary>
+                <div class="faq-answer"><p>For the fun of riddles, a passion for writing and the joy of Advent calendars!</p></div>
+            </details>
+            <details class="faq">
+                <summary>Is this illegal gambling or a lottery?</summary>
+                <div class="faq-answer"><p>No. Under German law, prize puzzles based on mental skill are not games of chance, since they do not depend on luck. Legal references (German): Preisrätsel mit Denksportaufgaben unterfallen mangels Abhängigkeit vom Zufall nicht dem § 287 StGB (nachzulesen in: Schönke/Schröder/Heine/Hecker StGB § 287 Rn.5 und § 284 Rn. 7), außerdem: BGH, Urt. v. 8.8.2017 − 1 StR 519/16 (LG Chemnitz). Bei dem Rätsel Adventskalender handelt es sich nicht um ein Glücksspiel nach dem GlüStV (siehe hierzu insbesondere BVerwG, Urteil vom 22.1.2014 – 8 C 26/12). </p></div>
+            </details>
+            <details class="faq">
+                <summary>What are the prizes?</summary>
+                <div class="faq-answer"><p>The fastest person on the 4th Sunday of Advent wins a gold coin (1 g). Second place wins a silver coin (1/2 oz), third place a real ancient bronze coin.</p></div>
+            </details>
+            <details class="faq">
+                <summary>Which good cause is supported?</summary>
+                <div class="faq-answer"><p>By taking part you also support a good cause. The donation goes to <a href="https://www.kinderschutz-zentrum-berlin.de">Kinderschutz-Zentrum Berlin e.V.</a>, <a href="https://www.platane19.de">Platane 19 e.V.</a> and <a href="https://www.welthungerhilfe.de">Welthungerhilfe</a>.</p></div>
+            </details>
+            <h3 class="faq-group">Riddles and schedule</h3>
+            <details class="faq">
+                <summary>What kind of riddles are they?</summary>
+                <div class="faq-answer"><p>The riddles are our own creations and are aimed at teenagers and adults. They need no special knowledge, just clever deduction and research (using the internet is allowed!). Wrapped in charming short stories by AIfred, the riddles contain clear tasks as well as subtle hints between the lines. They are usually neither trivia questions nor classic brain-teasers or maths problems.</p></div>
+            </details>
+            <details class="faq">
+                <summary>What kind of stories are they?</summary>
+                <div class="faq-answer"><p>The riddles come with short stories by AIfred, about 2 A4 pages each.</p></div>
+            </details>
+            <details class="faq">
+                <summary>How long do I have to answer?</summary>
+                <div class="faq-answer"><p>There are no deadlines this year! The fastest riddle solver on the 4th Sunday of Advent wins. Solving the earlier riddles before then will certainly be a decisive advantage, though.</p></div>
+            </details>
+            <details class="faq">
+                <summary>What if I could not solve a riddle?</summary>
+                <div class="faq-answer"><p>You can of course keep taking part and solving riddles. The last riddle builds on the previous ones, so it may not be solvable if earlier riddles were not solved correctly.</p></div>
+            </details>
+            <details class="faq">
+                <summary>How are the riddles published?</summary>
+                <div class="faq-answer"><p>The riddles are sent to everyone at the same time via WhatsApp. Speed only counts for the last riddle. There are no deadlines!</p></div>
+            </details>
+            <h3 class="faq-group">Payment</h3>
+            <details class="faq">
+                <summary>How do I pay?</summary>
+                <div class="faq-answer"><p>Via PayPal <a href="https://www.paypal.me/matsundroxy">matsundroxy@gmail.com</a>, bank transfer (recipient: Dominik Schommer, IBAN: DE36 1001 1001 2286 8358 58), or cash.</p></div>
+            </details>
+            <details class="faq">
+                <summary>How much is the entry fee?</summary>
+                <div class="faq-answer"><p>€5!</p></div>
+            </details>
+            <details class="faq">
+                <summary>What happens to the money?</summary>
+                <div class="faq-answer"><p>The entry fee is used exclusively for the prizes and a donation to a charitable cause.</p></div>
+            </details>
+            <details class="faq">
+                <summary>Can I pay more?</summary>
+                <div class="faq-answer"><p>Of course! Additional amounts can go towards the donation or towards covering costs.</p></div>
+            </details>
         </div>
-    </div>
+    </section>
 
-    <h3>Riddles and Process</h3>
-
-    <div class="faq">
-        <button class="faq-question">12. What kind of riddles are they? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The riddles are self-created and designed for teenagers and adults. They do not require any specific prior knowledge but call for clever problem-solving and online research (Internet use is allowed!). Wrapped in charming short stories featuring Mats and Roxy, the riddles present clear tasks along with subtle hints hidden between the lines. They are generally neither trivia questions nor traditional riddles or math problems.</p>
+    <!-- Closing -->
+    <section class="closing">
+        <div class="container">
+            <blockquote>
+                <span class="quote-label">What awaits you</span>
+                Solving riddles, switching off, puzzling things out together, reading the short stories and maybe reading them aloud to someone to bring them joy – all while supporting a good cause: that is the <strong>Mats &amp; Roxy Riddle Advent Calendar!</strong>
+            </blockquote>
+            <div class="recommendations">
+                <p>Warmly recommended by</p>
+                <div class="rec-list">
+                    <span><strong>Mats &amp; Roxy</strong> 2024</span>
+                    <span><strong>Stanley &amp; Mr. X</strong> 2025</span>
+                </div>
+            </div>
+            <a class="btn-main" href="https://wa.me/4915234796360" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Join now</a>
         </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">13. What kind of stories are they? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The riddles come with short stories (about 2 A4 pages) from Mats the raccoon and Roxy the fox. The stories are designed like a children's book.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">14. How long do I have to answer? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>Wednesday Riddle until Saturday 11:59 pm <br>
-                Saturday Riddle until Wednesday 18:59 pm <br>
-                Sunday Riddle until Wednesday 18:59 pm <br>
-                It usually doesn’t take longer than a few minutes to solve a riddle.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">15. What happens if I can't solve a riddle? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>You can still participate and solve the other riddles, but you will no longer be eligible for the prizes. EXCEPTION: It’s possible that you aren’t the only one who couldn’t solve a riddle. If everyone has struggled with the same riddle, the person with the most correct answers wins – so you could still win. Keep solving!</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">16. How are the riddles published? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The riddles are published for everyone simultaneously via WhatsApp or email. Speed matters only for the last riddle.</p>
-        </div>
-    </div>
+    </section>
 
-    <h3>Payment</h3>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Made with love by Doscho. All rights reserved.</p>
+        <p><a href="impressum.html" hreflang="de">Legal notice (German)</a> · <a href="datenschutzerklaerung.html" hreflang="de">Privacy policy (German)</a></p>
+    </footer>
 
-    <div class="faq">
-        <button class="faq-question">17. How do I pay? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>Via PayPal <a href="https://www.paypal.me/matsundroxy">matsundroxy@gmail.com</a>, bank transfer (Recipient: Dominik Schommer, IBAN: DE36 1001 1001 2286 8358 58), or cash.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">18. What is the participation fee? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>5 €!</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">19. What happens with the money? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>The participation fee is used exclusively for the prizes and a donation to a charitable cause.</p>
-        </div>
-    </div>
-    
-    <div class="faq">
-        <button class="faq-question">20. Can I pay more? <span class="arrow">▼</span></button>
-        <div class="faq-answer">
-            <p>Of course! Additional amounts can be used for the donation or to cover the costs.</p>
-        </div>
-    </div>
-    
-
-</section>
-
-<p class="rules-paragraph italic"><span class="highlight">What to expect: </span><br>Solving riddles, unwinding, puzzling together, reading short stories, and perhaps reading to someone to bring joy – and supporting a good cause at the same time: That's the <span class="highlight">Mats & Roxy Riddle Advent Calendar!</span></p>
-    
-    
-
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-3">
-    <p>2024 Created with love by DOSCHO. All rights reserved.</p>
-    <p><a href="impressum.html">Impressum</a> | <a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
-</footer>
-<script>
-    function toggleLanguage() {
-//        window.location.href = 'index.html'; // Wechselt zur deutschen Version
-    }
-    // FAQ collapse logic
-const faqQuestions = document.querySelectorAll(".faq-question");
-
-faqQuestions.forEach(question => {
-    question.addEventListener("click", () => {
-        const answer = question.nextElementSibling;
-        const arrow = question.querySelector('.arrow');
-
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
-
-        question.classList.toggle('open');
-    });
-});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js?v=2026-5"></script>
 </body>
 </html>
