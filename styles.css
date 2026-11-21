@@ -97,6 +97,20 @@ section { padding: 88px 0; }
     padding: 8px 14px !important;
 }
 .site-nav .nav-link:hover { color: var(--gold-light); }
+.site-nav .lang-switch .nav-link { color: rgba(255, 255, 255, 0.6); letter-spacing: 0.05em; }
+.site-nav .lang-switch .active-lang { color: var(--gold-light); font-weight: 600; }
+@media (min-width: 992px) {
+    .site-nav .lang-switch { margin-left: 8px; padding-left: 8px; border-left: 1px solid rgba(255, 255, 255, 0.2); }
+}
+.lang-mobile {
+    color: var(--gold-light);
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(236, 211, 145, 0.5);
+    border-radius: 999px;
+    padding: 3px 12px;
+    font-size: 14px;
+}
 .site-nav .navbar-toggler { color: #fff; border: none; font-size: 22px; }
 .site-nav .navbar-toggler:focus { box-shadow: none; }
 
